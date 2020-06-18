@@ -28,4 +28,4 @@ production:
   <<: *default
   database: teletri_production
   username: postgres
-  password: <%= ENV['KURS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['TELETRI_DATABASE_PASSWORD'] %>

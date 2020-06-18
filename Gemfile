@@ -25,6 +25,7 @@ gem 'pg', '~> 0.18'
 gem 'spree', '~> 4.1'
 gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
+gem 'spree_social', github: 'spree-contrib/spree_social'
 
 group :development do
   gem 'better_errors'
