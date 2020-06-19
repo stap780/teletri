@@ -30,6 +30,7 @@ require 'capistrano/rails'
 require "capistrano/rvm"
 require 'capistrano3/unicorn'
 require 'capistrano/rails/console'
+require 'capistrano/spree'
 
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
