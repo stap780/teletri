@@ -13,6 +13,10 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  config.admin_show_version = false
+  config.layout =  'spree/layouts/spree_application'#'application'  (это путь /views/layouts/application.html.erb)
+  config.logo = 'logo/logotype.jpg'
+  config.currency = 'RUB'
 end
 
 # Configure Spree Dependencies
@@ -26,5 +30,4 @@ Spree.dependencies do |dependencies|
   # dependencies.cart_add_item_service = 'MyNewAwesomeService'
 end
 
-
-Spree.user_class = "Spree::LegacyUser"
+Spree.user_class = "Spree::User"

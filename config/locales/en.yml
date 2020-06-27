@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  spree:
+    add_new_address: "Add New Address"

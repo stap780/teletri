@@ -1,5 +1,34 @@
 default:
   navigation:
+    - title: Men
+      subtitle: Categories
+      url: /t/men
+      items:
+        - :title: Shirts
+          :url: /t/men/shirts
+        - :title: T-shirts
+          :url: /t/men/t-shirts
+        - :title: Sweaters
+          :url: /t/men/sweaters
+        - :title: Jackets and Coats
+          :url: /t/men/jackets-and-coats
+      promo_banners:
+        - subtitle: New collection
+          title: Summer 2019
+          url: /t/new-collection/summer-2019
+          image: 'meganav/promo_banner_left-second-category.jpg'
+        - subtitle: Special Offers
+          title: Get up to 30% off
+          url: /t/special-offers/30-off
+          image: 'meganav/promo_banner_right-second-category.jpg'
+    - title: Гарнитуры
+      subtitle: Подкатегории
+      url: /t/garnitury
+      items:
+        - :title: Для дома
+          :url: /t/garnitury/dlia-doma
+        - :title: Для бизнеса
+          :url: /t/garnitury/dlia-bizniesa
     - title: Women
       subtitle: Categories
       url: /t/women
@@ -25,27 +54,6 @@ default:
           title: Get up to 30% off
           url: /t/special-offers/30-off
           image: 'meganav/promo_banner_right-first-category.jpg'
-    - title: Men
-      subtitle: Categories
-      url: /t/men
-      items:
-        - :title: Shirts
-          :url: /t/men/shirts
-        - :title: T-shirts
-          :url: /t/men/t-shirts
-        - :title: Sweaters
-          :url: /t/men/sweaters
-        - :title: Jackets and Coats
-          :url: /t/men/jackets-and-coats
-      promo_banners:
-        - subtitle: New collection
-          title: Summer 2019
-          url: /t/new-collection/summer-2019
-          image: 'meganav/promo_banner_left-second-category.jpg'
-        - subtitle: Special Offers
-          title: Get up to 30% off
-          url: /t/special-offers/30-off
-          image: 'meganav/promo_banner_right-second-category.jpg'
     - title: Sportswear
       subtitle: Categories
       url: /t/sportswear

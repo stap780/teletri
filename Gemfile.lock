@@ -1,4 +1,35 @@
 GIT
+  remote: https://github.com/spree-contrib/spree_contact_us.git
+  revision: 9bacb32536eb1d78bd287e7725030463faed97c1
+  specs:
+    spree_contact_us (4.0.0.alpha2)
+      deface (~> 1.0)
+      spree_core (>= 3.7.0, < 4.2)
+
+GIT
+  remote: https://github.com/spree-contrib/spree_i18n.git
+  revision: c2b5f8300db5399dcb8133cdc4639c167fca23b6
+  specs:
+    spree_i18n (4.0.0)
+      deface (~> 1.0)
+      i18n_data
+      kaminari-i18n
+      rails-i18n
+      routing-filter
+      spree_core (>= 3.7.0, < 5.0)
+      spree_extension
+
+GIT
+  remote: https://github.com/spree-contrib/spree_related_products.git
+  revision: e2a64fbfcde045ba94f541a405f6523a0d03c802
+  specs:
+    spree_related_products (3.3.0)
+      deface (~> 1.0)
+      spree_backend (>= 3.1.0, < 5.0)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+
+GIT
   remote: https://github.com/spree-contrib/spree_social.git
   revision: 824dadbe9fa81ad8d4287fb0e82161db17615d14
   specs:
@@ -12,6 +43,24 @@ GIT
       omniauth-google-oauth2
       omniauth-twitter
       spree_auth_devise (>= 3.1.0, < 5.0)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+
+GIT
+  remote: https://github.com/spree-contrib/spree_static_content.git
+  revision: a1e066bc612d373d18bc556e3d4229d67781c57b
+  specs:
+    spree_static_content (4.0.1)
+      deface (~> 1.5)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+
+GIT
+  remote: https://github.com/spree-contrib/spree_volume_pricing.git
+  revision: 417622beb9691858670f4912c2416e3290831dea
+  specs:
+    spree_volume_pricing (3.3.1)
+      deface (~> 1.0)
       spree_core (>= 3.1.0, < 5.0)
       spree_extension
 
@@ -84,7 +133,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
-    autoprefixer-rails (9.7.6)
+    autoprefixer-rails (9.8.1)
       execjs
     awesome_nested_set (3.2.0)
       activerecord (>= 4.0.0, < 7.0)
@@ -129,13 +178,6 @@ GEM
       activesupport (>= 3.0.0)
     cldr-plurals-runtime-rb (1.0.1)
     coderay (1.1.3)
-    coffee-rails (4.2.2)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     css_parser (1.7.1)
@@ -176,6 +218,7 @@ GEM
     hub (1.12.4)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
+    i18n_data (0.10.0)
     image_processing (1.11.0)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
@@ -203,6 +246,9 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
+    kaminari-i18n (0.5.0)
+      kaminari
+      rails
     kgio (2.11.3)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -307,6 +353,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (6.0.0)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 7)
     rails_layout (1.0.42)
     railties (6.0.3.2)
       actionpack (= 6.0.3.2)
@@ -328,6 +377,9 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    routing-filter (0.6.3)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     sass-rails (6.0.0)
@@ -478,7 +530,6 @@ DEPENDENCIES
   capistrano-rvm
   capistrano-spree (~> 1.0.0)
   capistrano3-unicorn
-  coffee-rails (~> 4.2)
   figaro
   hub
   jbuilder (~> 2.5)
@@ -491,8 +542,13 @@ DEPENDENCIES
   sass-rails
   spree (~> 4.1)
   spree_auth_devise (~> 4.1)
+  spree_contact_us!
   spree_gateway (~> 3.7)
+  spree_i18n!
+  spree_related_products!
   spree_social!
+  spree_static_content!
+  spree_volume_pricing!
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier (>= 1.3.0)

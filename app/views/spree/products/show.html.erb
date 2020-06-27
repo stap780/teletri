@@ -43,10 +43,9 @@
   <%= products_structured_data([@product]) %>
 
   <%= render 'spree/shared/product_added_modal' %>
+
 <% end %>
 
-<div
-  data-related-products
-  data-related-products-id="<%= @product.slug %>"
-  data-related-products-enabled="<%= @product.respond_to?(:has_related_products?) %>"
+<div data-related-products  data-related-products-id="<%= @product.slug %>" data-related-products-enabled="<%= @product.respond_to?(:has_related_products?) %>"
 />
+<%= render partial: 'spree/products/volume_pricing', locals: { product: @product } %>
