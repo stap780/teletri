@@ -1,6 +1,4 @@
-<% content_for :page_title do %>
-  <%= Spree.t(:general_settings) %>
-<% end %>
+<% content_for :page_title do %><%= Spree.t(:general_settings) %><% end %>
 
 <%= form_tag admin_general_settings_path, method: :put do %>
   <div id="preferences" data-hook>
@@ -8,7 +6,7 @@
     <fieldset class="general no-border-top">
 
       <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-12">
           <%#-------------------------------------------------%>
           <%# Security settings                               %>
           <%#-------------------------------------------------%>
@@ -53,12 +51,14 @@
           </div>
 
         </div>
-        <div class="col-12 col-lg-6">
+      </div>
+      <div class="row">
 
           <%#-------------------------------------------------%>
           <%# Currency Settings                               %>
           <%#-------------------------------------------------%>
-          <div class="card mb-3" id="general-settings-currency" data-hook="general_settings_currency">
+          <div class="col-12 col-lg-6" id="general-settings-currency" data-hook="general_settings_currency">
+            <div class="card mb-3">
             <div class="card-header">
               <h1 class="card-title mb-0 h5">
                 <%= Spree.t(:currency_settings)%>
@@ -72,15 +72,16 @@
               </div>
             </div>
           </div>
+          </div>
+
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-6 form-actions" data-hook="buttons">
+          <%= button Spree.t('actions.update'), 'save' %>
+          <span class="or"><%= Spree.t(:or) %></span>
+          <%= button_link_to Spree.t('actions.cancel'), edit_admin_general_settings_url, icon: 'delete' %>
         </div>
       </div>
-
-      <div class="form-actions" data-hook="buttons">
-        <%= button Spree.t('actions.update'), 'save' %>
-        <span class="or"><%= Spree.t(:or) %></span>
-        <%= button_link_to Spree.t('actions.cancel'), edit_admin_general_settings_url, icon: 'delete' %>
-      </div>
-
     </fieldset>
 
   </div>
