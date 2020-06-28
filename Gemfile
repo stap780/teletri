@@ -39,7 +39,7 @@ group :development do
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm'#, '~> 0.1.1'
   gem 'capistrano3-unicorn'
-  gem 'capistrano-spree', '~> 1.0.0'
+  gem 'capistrano-spree'
   gem 'hub', :require=>nil
   gem 'rails_layout'
 end

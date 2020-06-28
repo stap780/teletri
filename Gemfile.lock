@@ -528,7 +528,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-rails-console
   capistrano-rvm
-  capistrano-spree (~> 1.0.0)
+  capistrano-spree
   capistrano3-unicorn
   figaro
   hub
