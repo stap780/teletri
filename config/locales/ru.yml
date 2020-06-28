@@ -84,6 +84,7 @@ ru:
         on_hand: "На складе"
         shipping_category: "Категория доставки"
         tax_category: "Категория налогов"
+        less_than: "меньше чем"
       spree/promotion:
         advertise: "Рекламировать"
         code: "Код"
@@ -343,6 +344,8 @@ ru:
         other: "Зоны"
   address_book:
     save: "Сохранить адрес"
+    edit_shipping_address: "Редактировать адрес"
+    successfully_updated: "Адрес обновлён"
   devise:
     confirmations:
       confirmed: "Ваш аккаунт успешно активирован. Теперь вы авторизованы."
@@ -429,6 +432,7 @@ ru:
     add_stock: "Добавить склад"
     add_stock_management: "Добавить управление запасами"
     add_to_cart: "Добавить в корзину"
+    added_to_cart: "Добавлен в корзину"
     add_variant: "Добавить вариант"
     additional_item: "Ставка для дополнительных наименований"
     address1: "Адрес"
@@ -526,6 +530,7 @@ ru:
     backorderable: "Возможен предзаказ"
     backorderable_default: "Предзаказ по умолчанию"
     backordered: "Предзаказано"
+    backordered_info: "В наличии"
     backorders_allowed: "Предзаказы разрешены"
     balance_due: "Дебетовое сальдо"
     base_amount:
@@ -553,12 +558,20 @@ ru:
     card_type:
     card_type_is: "Тип карты"
     cart: "Корзина"
-    cart_subtotal:
+    cart_page:
+      add_promo_code: "Добавить промо-код"
+      checkout: "Оформить заказ"
+      product: "Наименование товара"
+      header: "Корзина"
+    cart_subtotal: "Подитог"
     categories: "Категории"
     category: "Категория"
     charged: "Изменен"
     check_for_spree_alerts: "Проверить оповещения Spree"
     checkout: "Оформление заказа"
+    checkout_page:
+      header: "Оформление заказа"
+      back_to_cart: "Назад в корзину"
     choose_a_customer: "Выберите клиента"
     choose_a_taxon_to_sort_products_for: "Выберите таксон для сортировки товаров"
     choose_currency: "Выбрать валюту"
@@ -1031,6 +1044,9 @@ ru:
     percent: "Процент"
     percent_per_item: "Процент с каждой единицы товара"
     permalink: "Постоянная ссылка"
+    pdp:
+      checkout: "Оформить заказ"
+      view_cart: "Посмотреть корзину"
     phone: "Телефон"
     place_order: "Разместить заказ"
     please_define_payment_methods: "Сначала определите способ оплаты."
@@ -1350,7 +1366,7 @@ ru:
     street_address: "Адрес"
     street_address_2: "Адрес (строка 2)"
     subtitle: "Подзаголовок"
-    subtotal: "Подытог"
+    subtotal: "Подитог"
     subtract: "Вычет"
     success: "Успех"
     successfully_created: "%{resource} был успешно создан!"
