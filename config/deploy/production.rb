@@ -60,5 +60,5 @@
 #     # password: "please use keys"
 #   }
 
-server '167.172.236.198', user: 'deploy', roles: %w{app db web}
+server '159.203.111.0', user: 'deploy', roles: %w{app db web}
 set :unicorn_rack_env, -> { "production" }

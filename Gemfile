@@ -20,16 +20,17 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 gem 'figaro'
-gem 'pg', '~> 0.18'
-gem 'spree', '~> 4.1'
-gem 'spree_auth_devise', '~> 4.1'
-gem 'spree_gateway', '~> 3.7'
+gem 'pg', '~> 1.1'
+gem 'spree', '~> 4.2.0'
+gem 'spree_auth_devise', '~> 4.3'
+gem 'spree_gateway', '~> 3.9'
 gem 'spree_social', github: 'spree-contrib/spree_social'
-gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+gem 'spree_i18n', '~> 5.0'
+gem 'deface'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
-gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us'
 gem 'spree_volume_pricing', github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
+gem 'spree_analytics_trackers', '~> 2.0'
 
 group :development do
   gem 'better_errors'

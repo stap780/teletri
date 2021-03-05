@@ -8,6 +8,7 @@
 //= require jquery_ujs
 //= require accounting.min
 //= require spree/frontend
-//= require spree/frontend/spree_i18n
+//= require spree/frontend/add_to_cart_analytics
+//= require spree/frontend/remove_from_cart_analytics
 
 //= require_tree .

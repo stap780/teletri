@@ -1,19 +1,24 @@
 <div class="border-top footer-spree-copyright">
   <div class="container">
     <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center py-3 footer-spree-copyright-content">
-      <div class="mr-2">
+      <div class="col-10">
         © <%= Time.current.year %>
         <%= link_to current_store.name, "https://#{current_store.url}" %>.
         <%= Spree.t(:all_rights_reserved) %>.
+        <% if current_store.contact_phone&.present? %>
+          <%= Spree.t(:call_us_now) %>: <%= current_store.contact_phone %>
+        <% end %>
+        <% if current_store.customer_support_email&.present? %>
+          <%= Spree.t(:email) %>: <%= current_store.customer_support_email %>
+        <% end %>
       </div>
       <div class="d-none d-lg-inline-block mr-2">|</div>
-      <div>Разработано</div>
-      <div class="ml-1 mb-1 mb-lg-0">
-        <%= link_to 'Ketago','https://ketago.com/', target: :blank, 'aria-label': 'Go to Ketago', rel: :follow %>
-        <%# link_to 'https://sparksolutions.co/', target: :blank, 'aria-label': 'Go to Spark Solutions', rel: :follow do %>
+      <div>Создано в <%= link_to  'Ketago', 'https://ketago.com/', target: :blank, 'aria-label': 'Go to Ketago' %></div>
+      <!-- <div class="mb-1 mb-lg-0">
+        <%# link_to 'https://ketago.com/', target: :blank, 'aria-label': 'Go to Ketago', rel: :follow do %>
           <%# image_tag 'spark-logo@3x.png', class: 'footer-spree-copyright-logo-spark mx-2', alt: 'Spree Commerce & Ruby on Rails developers', title: 'Spree Commerce & Ruby on Rails developers' %>
         <%# end %>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

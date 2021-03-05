@@ -480,7 +480,8 @@ ru:
     all_adjustments_closed: "Все корректировки успешно закрыты!"
     all_adjustments_opened: "Все корректировки успешно открыты!"
     all_departments: "Все разделы"
-    all_items_have_been_returned:
+    all_rights_reserved: "Все права зарегистрированны"
+    all_items_have_been_returned: "Все позиции возвращены"
     allow_ssl_in_development_and_test: "Разрешить SSL для development и test режимов"
     allow_ssl_in_production: "Разрешить SSL для production режима"
     allow_ssl_in_staging: "Разрешить SSL для staging режима"
@@ -552,6 +553,7 @@ ru:
     cannot_perform_operation: "Невозможно выполнить требуемую операцию"
     cannot_set_shipping_method_without_address: "Невозможно выбрать способ доставки, пока данные пользователя не указаны."
     capture: "Провести платёж"
+    call_us_now: "Телефон"
     capture_events: "Платежи"
     card_code: "Код карты"
     card_number: "Номер карты"
@@ -645,6 +647,7 @@ ru:
     customer_returns: "Возвраты покупателю"
     customer_search: "Поиск клиента"
     cut:
+    cvv: "cvv"
     cvv_response:
     dash:
       jirafe:
@@ -696,7 +699,7 @@ ru:
         missing_product: Скидочный купон не может быть применён, так как в вашем заказе нет необходимых товаров.
         no_user_specified: Вам нужно войти на сайт, чтобы применить скидочный купон.
         not_first_order: Этот купон может быть применён только к первому заказу.
-    email: "Электронная почта"
+    email: "Email"
     empty: "пусто"
     empty_cart: "Очистить корзину"
     enable_mail_delivery: "Включить доставку почты"
@@ -880,6 +883,8 @@ ru:
     nav_bar:
       show_search: "Поиск"
       show_user_menu: "Личный кабинет"
+      desktop: 'nav_bar_desktop'
+      mobile: 'nav_bar_mobile'
     new: "Новый"
     new_adjustment: "Новая корректировка"
     new_country: "Новая страна"
@@ -1037,6 +1042,7 @@ ru:
       pending: "В ожидании"
       processing: "В обработке"
       void: "Аннулирован"
+    payment_type: "Способы оплаты"
     payment_updated: "Платёж обновлён"
     payments: "Платежи"
     pending: "В ожидании"

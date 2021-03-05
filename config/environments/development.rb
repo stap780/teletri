@@ -42,6 +42,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Store files locally.
+  config.active_storage.service = :local
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
