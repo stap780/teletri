@@ -41,7 +41,7 @@ set :application, 'teletri'
 set :repo_url, 'git@github.com:stap780/teletri.git'
 set :deploy_to, '/var/www/teletri'
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public', 'public/storage')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public') #, 'public/storage'
 set :format, :pretty
 set :log_level, :info
 after 'deploy:updated', 'deface:precompile'

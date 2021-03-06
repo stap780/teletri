@@ -590,6 +590,7 @@ ru:
     close_all_adjustments: "Закрыть все корректировки"
     code: "Кодовое слово"
     company: "Компания"
+    compare_at_price: "Цена для сравнения"
     complete: "Завершено"
     configuration: "Конфигурация"
     configurations: "Конфигурация"
@@ -859,6 +860,7 @@ ru:
     manage_variants: "Изменить варианты"
     manual_intervention_required:
     master_price: "Основная цена"
+    master_sku: "Основной артикул"
     match_choices:
       all: "Всем"
       none: "Ни одному"
@@ -1241,6 +1243,7 @@ ru:
     select: "Выбрать"
     select_a_return_authorization_reason: "Выбрать причину разрешения на возврат"
     select_a_stock_location: "Выбрать адрес склада"
+    select_a_date: "Выберите дату"
     select_from_prototype: "Выбрать из прототипов"
     select_stock: "Выбрать склад"
     selected_quantity_not_available: 'товара %{item} недостаточно.'
@@ -1298,8 +1301,8 @@ ru:
     show_only_considered_risky:
     show_rate_in_label: "Показывать процент в названии"
     sku: "Артикул"
-    skus:
-    slug: "Ссылка"
+    skus: "Артикулы"
+    slug: "Ссылка (slug, handle)"
     source: "Источник"
     special_instructions: "Дополнительные инструкции"
     split: "Разделить"

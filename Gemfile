@@ -19,6 +19,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+gem 'rest-client', '~> 2.1'
 gem 'figaro'
 gem 'pg', '~> 1.1'
 gem 'spree', '~> 4.2.0'
