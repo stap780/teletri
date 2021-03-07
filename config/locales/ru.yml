@@ -806,7 +806,7 @@ ru:
     insufficient_stock_lines_present: "Недостаточно товара на складе"
     intercept_email_address: "Перехват писем"
     intercept_email_instructions: "Заменить email получателя на этот адрес."
-    internationalization:
+    internationalization: ""
     internal_name: "Внутреннее имя"
     invalid_credit_card: "Не верно указана платежная карта"
     invalid_exchange_variant: ""
@@ -1481,6 +1481,7 @@ ru:
     value: "Значение"
     variant: "Вариант"
     variant_placeholder: "Выберите вариант"
+    variant_prices_search_placeholder:
     variants: "Варианты"
     version: "Версия"
     void: "Аннулировать"

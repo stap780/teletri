@@ -32,6 +32,7 @@ gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
 gem 'spree_volume_pricing', github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'spree_analytics_trackers', '~> 2.0'
+gem 'spree_editor', github: 'spree-contrib/spree_editor'
 
 group :development do
   gem 'better_errors'
