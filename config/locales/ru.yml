@@ -710,6 +710,7 @@ ru:
     enable_mail_delivery: "Включить доставку почты"
     end: "Конец"
     ending_in: "Оканчивается"
+    ending_at: "дата"
     environment: "Среда окружения"
     error: "ошибка"
     errors:
@@ -1313,6 +1314,7 @@ ru:
     skus: "Артикулы"
     slug: "Ссылка (slug, handle)"
     source: "Источник"
+    social_authentication_methods: "Вход через соц. сети"
     special_instructions: "Дополнительные инструкции"
     split: "Разделить"
     spree_gateway_error_flash_for_checkout: "Возникли проблемы с Вашими реквизитами. Пожалуйста, проверьте их и попробуйте ещё раз."
@@ -1485,6 +1487,7 @@ ru:
     variants: "Варианты"
     version: "Версия"
     void: "Аннулировать"
+    volume_price_models: "Зависимые цены"
     weight: "Вес"
     what_is_a_cvv: "Что такое CVV?"
     what_is_this: "Что это?"
