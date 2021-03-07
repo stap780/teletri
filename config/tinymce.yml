@@ -33,10 +33,11 @@ plugins:
   - template
   - image
   - code
+  - link
 
 # Each line is a toolbar
 toolbar:
-  - undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | image code charmap media
+  - undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | link image code charmap media
   # - cut copy paste pastetext pasteword | search replace | undo redo | link unlink anchor image cleanup help code | insertdate inserttime preview
   # - bold italic underline strikethrough | justifyleft justifycenter justifyright justifyfull | sub sup | bullist numlist | outdent indent blockquote
   # - styleselect formatselect fontselect fontsizeselect | forecolor backcolor
