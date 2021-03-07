@@ -1212,7 +1212,7 @@ ru:
     return_authorization: "Разрешение на возврат"
     return_authorization_reasons: "Причины разрешения на возврат"
     return_authorization_updated: "Разрешение на возврат обновлено"
-    return_authorizations: "Разрешения на возврат"
+    return_authorizations: "Список возвратов"
     return_item_inventory_unit_ineligible:
     return_item_inventory_unit_reimbursed:
     return_item_rma_ineligible:
@@ -1222,7 +1222,7 @@ ru:
     return_number: "Номер возврата"
     return_quantity: "возвращенное количество"
     returned: "Возвращенные"
-    returns: "Разрешения на возврат"
+    returns: "Возвраты"
     review: "Проверить"
     risk:
     risk_analysis:

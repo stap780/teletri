@@ -1,17 +1,4 @@
 GIT
-  remote: https://github.com/spree-contrib/spree_editor.git
-  revision: 9090e9bb14f0cf64cd5209e355878269296ba752
-  specs:
-    spree_editor (3.3.2)
-      ckeditor (~> 5.0.0)
-      coffee-rails
-      deface (~> 1.0)
-      spree_backend (>= 3.1.0, < 5.0)
-      spree_core (>= 3.1.0, < 5.0)
-      spree_extension
-      tinymce-rails (~> 4.2.5)
-
-GIT
   remote: https://github.com/spree-contrib/spree_related_products.git
   revision: a80585704602cc04d5d34f28a0e1b0981e9f5cee
   specs:
@@ -40,7 +27,7 @@ GIT
 
 GIT
   remote: https://github.com/spree-contrib/spree_static_content.git
-  revision: 68b6782c1fddbc9bea1cda9935f25a50f21920d6
+  revision: ef467fee387941ae5fa70f48607a5280601696d3
   specs:
     spree_static_content (4.2.0)
       deface (~> 1.5)
@@ -55,6 +42,19 @@ GIT
       deface (~> 1.0)
       spree_core (>= 3.1.0, < 5.0)
       spree_extension
+
+GIT
+  remote: https://github.com/stap780/spree_editor.git
+  revision: 0fea419f1132d94a3af516c2903b4ec1a193b1ca
+  specs:
+    spree_editor (3.3.2)
+      ckeditor (~> 5.1.0)
+      coffee-rails
+      deface (~> 1.0)
+      spree_backend (>= 3.1.0, < 5.0)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+      tinymce-rails (~> 4.2.5)
 
 GEM
   remote: https://rubygems.org/
@@ -174,7 +174,7 @@ GEM
       capistrano (~> 3.1, >= 3.1.0)
     carmen (1.1.3)
       activesupport (>= 3.0.0)
-    ckeditor (5.0.0)
+    ckeditor (5.1.0)
       orm_adapter (~> 0.5.0)
     cldr-plurals-runtime-rb (1.1.0)
     coderay (1.1.3)
@@ -214,7 +214,7 @@ GEM
       ruby2_keywords
     faraday-net_http (1.0.1)
     ffaker (2.18.0)
-    ffi (1.14.2)
+    ffi (1.15.0)
     figaro (1.2.0)
       thor (>= 0.14.0, < 2)
     flatpickr (4.6.6.0)
@@ -279,13 +279,13 @@ GEM
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2020.0512)
+    mime-types-data (3.2021.0225)
     mimemagic (0.3.5)
     mini_magick (4.11.0)
     mini_mime (1.0.2)
     mini_portile2 (2.5.0)
     minitest (5.14.4)
-    monetize (1.10.0)
+    monetize (1.11.0)
       money (~> 6.12)
     money (6.14.1)
       i18n (>= 0.6.4, <= 2)
@@ -296,7 +296,7 @@ GEM
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
     netrc (0.11.0)
-    nio4r (2.5.5)
+    nio4r (2.5.7)
     nokogiri (1.11.1)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
@@ -417,29 +417,29 @@ GEM
       sprockets-rails
       tilt
     select2-rails (4.0.13)
-    spree (4.2.0)
-      spree_api (= 4.2.0)
-      spree_backend (= 4.2.0)
-      spree_cmd (= 4.2.0)
-      spree_core (= 4.2.0)
-      spree_frontend (= 4.2.0)
-      spree_sample (= 4.2.0)
+    spree (4.2.1)
+      spree_api (= 4.2.1)
+      spree_backend (= 4.2.1)
+      spree_cmd (= 4.2.1)
+      spree_core (= 4.2.1)
+      spree_frontend (= 4.2.1)
+      spree_sample (= 4.2.1)
     spree_analytics_trackers (2.1.1)
       deface (~> 1.0)
       spree_backend (>= 4.1.0, < 5.0)
       spree_core (>= 4.1.0, < 5.0)
       spree_extension
-    spree_api (4.2.0)
+    spree_api (4.2.1)
       doorkeeper (~> 5.2, >= 5.2.1)
       jsonapi-serializer (~> 2.1)
       rabl (~> 0.14.2)
-      spree_core (= 4.2.0)
+      spree_core (= 4.2.1)
     spree_auth_devise (4.3.4)
       devise (~> 4.7)
       devise-encryptable (= 0.2.0)
       spree_core (>= 4.1, < 5.0)
       spree_extension
-    spree_backend (4.2.0)
+    spree_backend (4.2.1)
       bootstrap (>= 4.3.1, < 4.7.0)
       flatpickr (~> 4.6.0)
       glyphicons (~> 1.0.2)
@@ -447,11 +447,11 @@ GEM
       jquery-rails (~> 4.3)
       jquery-ui-rails (~> 6.0.1)
       select2-rails (~> 4.0.0)
-      spree_api (= 4.2.0)
-      spree_core (= 4.2.0)
-    spree_cmd (4.2.0)
+      spree_api (= 4.2.1)
+      spree_core (= 4.2.1)
+    spree_cmd (4.2.1)
       thor (~> 1.0)
-    spree_core (4.2.0)
+    spree_core (4.2.1)
       active_storage_validations (~> 0.9)
       activemerchant (~> 1.67)
       acts_as_list (~> 0.8)
@@ -481,14 +481,14 @@ GEM
     spree_extension (0.0.9)
       activerecord (>= 4.2)
       spree_core
-    spree_frontend (4.2.0)
+    spree_frontend (4.2.1)
       bootstrap (>= 4.3.1, < 4.7.0)
       canonical-rails (~> 0.2.10)
       glyphicons (~> 1.0.2)
       inline_svg (~> 1.5)
       jquery-rails (~> 4.3)
-      spree_api (= 4.2.0)
-      spree_core (= 4.2.0)
+      spree_api (= 4.2.1)
+      spree_core (= 4.2.1)
       turbolinks (~> 5.2.0)
     spree_gateway (3.9.3)
       spree_core (>= 3.7.0, < 5.0)
@@ -499,8 +499,8 @@ GEM
       rails-i18n
       spree_core (>= 4.2.0.rc3, < 5.0)
       spree_extension
-    spree_sample (4.2.0)
-      spree_core (= 4.2.0)
+    spree_sample (4.2.1)
+      spree_core (= 4.2.1)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)

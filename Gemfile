@@ -31,7 +31,7 @@ gem 'deface'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
 gem 'spree_volume_pricing', github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
-gem 'spree_editor', github: 'spree-contrib/spree_editor'
+gem 'spree_editor', github: 'stap780/spree_editor'
 gem 'spree_analytics_trackers', '~> 2.0'
 
 group :development do
