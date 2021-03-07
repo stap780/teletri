@@ -1,47 +1,51 @@
 default:
   navigation:
-    - title: Гарнитуры
-      subtitle: Подкатегории
-      url: /t/categories/garnitury
-      items:
-        - :title: Для дома
-          :url: /t/garnitury/dlia-doma
-        - :title: Для бизнеса
-          :url: /t/garnitury/dlia-bizniesa
-    - title: Men
-      subtitle: Categories
-      url: /t/categories/men
-      items:
-        - :title: Shirts
-          :url: /t/men/shirts
-        - :title: Sweaters
-          :url: /t/men/sweaters
-      promo_banners:
-        - subtitle: New collection
-          title: Summer 2019
-          url: /t/new-collection/summer-2019
-          image: 'meganav/promo_banner_left-second-category.jpg'
-        - subtitle: Special Offers
-          title: Get up to 30% off
-          url: /t/special-offers/30-off
-          image: 'meganav/promo_banner_right-second-category.jpg'
-    - title: Women
-      subtitle: Categories
-      url: /t/categories/women
-      items:
-        - :title: Dresses
-          :url: /t/women/dresses
-        - :title: Jackets and Coats
-          :url: /t/women/jackets-and-coats
-      promo_banners:
-        - subtitle: New collection
-          title: Summer 2019
-          url: /t/new-collection/summer-2019
-          image: 'meganav/promo_banner_left-first-category.jpg'
-        - subtitle: Special Offers
-          title: Get up to 30% off
-          url: /t/special-offers/30-off
-          image: 'meganav/promo_banner_right-first-category.jpg'
+    - title: Jabra
+      # subtitle: Подкатегории
+      url: /t/categories/jabra
+    - title: Plantronics
+      url: /t/categories/plantronics
+    - title: Источники питания
+      url: /t/categories/istochniki-pitaniia
+    #   items:
+    #     - :title: Для дома
+    #       :url: /t/garnitury/dlia-doma
+    #     - :title: Для бизнеса
+    #       :url: /t/garnitury/dlia-bizniesa
+    # - title: Men
+    #   subtitle: Categories
+    #   url: /t/categories/men
+    #   items:
+    #     - :title: Shirts
+    #       :url: /t/men/shirts
+    #     - :title: Sweaters
+    #       :url: /t/men/sweaters
+    #   promo_banners:
+    #     - subtitle: New collection
+    #       title: Summer 2019
+    #       url: /t/new-collection/summer-2019
+    #       image: 'meganav/promo_banner_left-second-category.jpg'
+    #     - subtitle: Special Offers
+    #       title: Get up to 30% off
+    #       url: /t/special-offers/30-off
+    #       image: 'meganav/promo_banner_right-second-category.jpg'
+    # - title: Women
+    #   subtitle: Categories
+    #   url: /t/categories/women
+    #   items:
+    #     - :title: Dresses
+    #       :url: /t/women/dresses
+    #     - :title: Jackets and Coats
+    #       :url: /t/women/jackets-and-coats
+    #   promo_banners:
+    #     - subtitle: New collection
+    #       title: Summer 2019
+    #       url: /t/new-collection/summer-2019
+    #       image: 'meganav/promo_banner_left-first-category.jpg'
+    #     - subtitle: Special Offers
+    #       title: Get up to 30% off
+    #       url: /t/special-offers/30-off
+    #       image: 'meganav/promo_banner_right-first-category.jpg'
     # - title: Sportswear
     #   subtitle: Categories
     #   url: /t/categories/sportswear

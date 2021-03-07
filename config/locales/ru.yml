@@ -196,6 +196,10 @@ ru:
               other_completed_return_item_exists:
             reimbursement:
               cannot_be_associated_unless_accepted:
+        spree/shipping_method:
+          attributes:
+            base:
+              required_shipping_category: "Выберите категорию доставки"
         spree/store:
           attributes:
             base:
@@ -802,6 +806,7 @@ ru:
     insufficient_stock_lines_present: "Недостаточно товара на складе"
     intercept_email_address: "Перехват писем"
     intercept_email_instructions: "Заменить email получателя на этот адрес."
+    internationalization:
     internal_name: "Внутреннее имя"
     invalid_credit_card: "Не верно указана платежная карта"
     invalid_exchange_variant: ""
@@ -951,6 +956,7 @@ ru:
       product_not_deleted: "Товар не может быть удалён"
       variant_deleted: "Вариант успешно удалён"
       variant_not_deleted: "Вариант не может быть удален"
+      prices_saved: "Цены сохранены"
     number: "Номер"
     num_orders: "Кол-во заказов"
     on_hand: "в наличии"
@@ -1232,6 +1238,7 @@ ru:
     sales_totals: "Всего продано"
     save_and_continue: "Сохранить и продолжить"
     save_my_address: "Сохранить адрес"
+    saving: "Сохранение"
     say_no: "Нет"
     say_yes: "Да"
     scope: "Фильтр"
@@ -1245,8 +1252,10 @@ ru:
     select_a_stock_location: "Выбрать адрес склада"
     select_a_date: "Выберите дату"
     select_from_prototype: "Выбрать из прототипов"
+    select_an_option: "Выберите опцию"
     select_stock: "Выбрать склад"
     selected_quantity_not_available: 'товара %{item} недостаточно.'
+    select_an_option: "Выберите вариант"
     send_copy_of_all_mails_to: "Отсылать копии всех писем на"
     send_mails_as: "Отсылать почту как"
     server: "Сервер"
