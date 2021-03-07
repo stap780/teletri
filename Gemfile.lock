@@ -1,4 +1,17 @@
 GIT
+  remote: https://github.com/spree-contrib/spree_editor.git
+  revision: 9090e9bb14f0cf64cd5209e355878269296ba752
+  specs:
+    spree_editor (3.3.2)
+      ckeditor (~> 5.0.0)
+      coffee-rails
+      deface (~> 1.0)
+      spree_backend (>= 3.1.0, < 5.0)
+      spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+      tinymce-rails (~> 4.2.5)
+
+GIT
   remote: https://github.com/spree-contrib/spree_related_products.git
   revision: a80585704602cc04d5d34f28a0e1b0981e9f5cee
   specs:
@@ -161,8 +174,17 @@ GEM
       capistrano (~> 3.1, >= 3.1.0)
     carmen (1.1.3)
       activesupport (>= 3.0.0)
+    ckeditor (5.0.0)
+      orm_adapter (~> 0.5.0)
     cldr-plurals-runtime-rb (1.1.0)
     coderay (1.1.3)
+    coffee-rails (5.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 5.2.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     css_parser (1.9.0)
@@ -505,6 +527,8 @@ GEM
     stringex (2.8.5)
     thor (1.1.0)
     tilt (2.0.10)
+    tinymce-rails (4.2.8)
+      railties (>= 3.1.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -562,6 +586,7 @@ DEPENDENCIES
   spree (~> 4.2.0)
   spree_analytics_trackers (~> 2.0)
   spree_auth_devise (~> 4.3)
+  spree_editor!
   spree_gateway (~> 3.9)
   spree_i18n (~> 5.0)
   spree_related_products!
