@@ -8,5 +8,6 @@
 //= require jquery_ujs
 //= require spree/backend
 //= require spree/backend/spree_volume_pricing
+//= require tinymce/langs
 
 //= require_tree .
