@@ -710,7 +710,7 @@ ru:
     enable_mail_delivery: "Включить доставку почты"
     end: "Конец"
     ending_in: "Оканчивается"
-    ending_at: "дата"
+    ending_at: "конец"
     environment: "Среда окружения"
     error: "ошибка"
     errors:
@@ -1267,7 +1267,7 @@ ru:
     ship_total: "Всего к доставке"
     shipment: "Отправка"
     shipment_adjustments: "Корректировки доставки"
-    shipment_details:
+    shipment_details: "Детали доставки"
     shipment_mailer:
       shipped_email:
         dear_customer: "Дорогой покупатель,\n"
@@ -1308,7 +1308,7 @@ ru:
     show_deleted: "Показать удаленные"
     show_discontinued: "Показать товары с истекшим сроком продажи"
     show_only_complete_orders: "Показывать только завершённые заказы"
-    show_only_considered_risky:
+    show_only_considered_risky: "только с риском"
     show_rate_in_label: "Показывать процент в названии"
     sku: "Артикул"
     skus: "Артикулы"
@@ -1319,8 +1319,9 @@ ru:
     split: "Разделить"
     spree_gateway_error_flash_for_checkout: "Возникли проблемы с Вашими реквизитами. Пожалуйста, проверьте их и попробуйте ещё раз."
     ssl:
-      change_protocol:
+      change_protocol: "смените протокол"
     start: "Начало"
+    starting_from: "начало"
     state: "Регион/Область"
     state_based: "Есть области"
     state_change: "Смена статуса"
@@ -1483,7 +1484,7 @@ ru:
     value: "Значение"
     variant: "Вариант"
     variant_placeholder: "Выберите вариант"
-    variant_prices_search_placeholder:
+    variant_prices_search_placeholder: "поиск ценового варианта"
     variants: "Варианты"
     version: "Версия"
     void: "Аннулировать"

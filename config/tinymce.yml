@@ -1,44 +1,28 @@
-# Spree Editor TinyMCE Configuration
-#
-# These are the options that will automatically be passed into the tinyMCE.init function
-# whenever TinyMCE is loaded in one of your spree pages. Please edit this file to
-# customise your TinyMCE setup in your spree installation. If you wish to see the full
+# Editor TinyMCE Configuration
+
 # range of configuration options then please go here:
 #
 #    http://www.tinymce.com/wiki.php/configuration
 
 # TinyMCE Options
 mode: "exact"
-theme: "modern"
 language: "<%= I18n.locale.to_s.split('-')[0].downcase %>"
-skin: "lightgray"
 schema: "html5-strict"
 element_format: "html"
-resize: true
 menubar: false
+statusbar: false
+
+toolbar:
+  - styleselect | bold italic underline strikethrough | undo redo | bullist numlist
+  - alignleft aligncenter alignright alignjustify | image link code charmap media
 plugins:
-  - layer
-  - table
-  - insertdatetime
-  - preview
-  - media
-  - searchreplace
-  - contextmenu
-  - paste
-  - directionality
-  - fullscreen
-  - noneditable
-  - visualchars
-  - nonbreaking
-  - template
   - image
   - link
   - code
-
-# Each line is a toolbar
-toolbar:
-  - search replace | undo redo | link unlink anchor image cleanup code
-  - bold italic underline strikethrough | justifyleft justifycenter justifyright justifyfull | sub sup | bullist numlist | outdent indent blockquote"
-  - styleselect formatselect fontselect fontsizeselect | forecolor backcolor
-  # - tablecontrols | hr removeformat visualaid
-  #- fullscreen | charmap media | visualchars blockquote | cut copy paste pastetext pasteword help insertdate inserttime preview
+  - media
+  - table
+  - directionality
+  - contextmenu
+  - layer
+  - wordcount
+  - lists

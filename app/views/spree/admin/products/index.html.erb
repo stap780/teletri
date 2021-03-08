@@ -53,6 +53,7 @@
   <table class="table" id="listing_products">
     <thead>
       <tr data-hook="admin_products_index_headers">
+        <th><%= check_box_tag 'selectAll', value = 'selectAll'%></th>
         <th scope="col" colspan="2"><%= sort_link @search,:name, Spree.t(:name), { default_order: "desc" }, {title: 'admin_products_listing_name_title'} %></th>
         <th scope="col"><%= Spree.t(:sku) %></th>
         <th scope="col"><%= Spree.t(:status) %></th>
@@ -66,6 +67,7 @@
       <% @collection.each do |product| %>
         <% available_status = available_status(product) %>
           <tr <%== "style='color: red;'" if product.deleted? %> id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows" class="<%= cycle('odd', 'even') %>">
+            <td><%=check_box_tag "product_ids[]", product.id%></td>
             <td scope="row" class="image">
               <%= link_to edit_admin_product_path(product) do %>
                 <%= mini_image product %>

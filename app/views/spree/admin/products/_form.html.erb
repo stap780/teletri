@@ -21,10 +21,75 @@
       <div data-hook="admin_product_form_description">
         <%= f.field_container :description, class: ['form-group'] do %>
           <%= f.label :description, Spree.t(:description) %>
-          <%= f.text_area :description, { rows: "#{unless @product.has_variants? then '20' else '13' end}", class: 'form-control' } %>
+          <%= f.text_area :description, { rows: "#{unless @product.has_variants? then '25' else '18' end}", class: 'form-control tinymce' } %>
+          <%= tinymce %>
           <%= f.error_message_on :description %>
         <% end %>
       </div>
+
+      <div data-hook="admin_product_form_taxons">
+        <%= f.field_container :taxons, class: ['form-group'] do %>
+          <%= f.label :taxon_ids, Spree.t(:taxons) %>
+
+          <% if can? :modify, Spree::Classification %>
+            <%= f.select :taxon_ids, options_from_collection_for_select(@product.taxons, :id, :pretty_name, @product.taxons.pluck(:id)), { include_hidden: true }, multiple: true, class: 'select2-hidden-accessible' %>
+          <% elsif @product.taxons.any? %>
+            <ul class="text_list">
+              <% @product.taxons.each do |taxon| %>
+                <li><%= taxon.name %></li>
+              <% end %>
+            </ul>
+          <% else %>
+            <div class="alert alert-info"><%= Spree.t(:no_resource_found, resource: :taxons) %></div>
+          <% end %>
+
+        <% end %>
+      </div>
+
+      <div data-hook="admin_product_form_option_types">
+        <%= f.field_container :option_types, class: ['form-group'] do %>
+          <%= f.label :option_type_ids, Spree.t(:option_types) %>
+
+          <% if can? :modify, Spree::ProductOptionType %>
+            <%= f.select :option_type_ids, options_from_collection_for_select(Spree::OptionType.all, :id, :name, @product.option_types.pluck(:id)), { include_hidden: true }, multiple: true, class: 'select2-hidden-accessible' %>
+          <% elsif @product.option_types.any? %>
+            <ul class="text_list">
+              <% @product.option_types.each do |type| %>
+                <li><%= type.presentation %> (<%= type.name %>)</li>
+              <% end %>
+            </ul>
+          <% else %>
+            <div class="alert alert-info"><%= Spree.t(:no_resource_found, resource: :option_types) %></div>
+          <% end %>
+
+        <% end %>
+      </div>
+      <div data-hook="admin_product_form_meta">
+        <div data-hook="admin_product_form_meta_title">
+          <%= f.field_container :meta_title, class: ['form-group'] do %>
+            <%= f.label :meta_title, Spree.t(:meta_title) %>
+            <%= f.text_field :meta_title, class: 'form-control' %>
+          <% end %>
+        </div>
+
+        <div data-hook="admin_product_form_meta_keywords">
+          <%= f.field_container :meta_keywords, class: ['form-group'] do %>
+            <%= f.label :meta_keywords, Spree.t(:meta_keywords) %>
+            <%= f.text_field :meta_keywords, class: 'form-control' %>
+          <% end %>
+        </div>
+
+        <div data-hook="admin_product_form_meta_description">
+          <%= f.field_container :meta_description, class: ['form-group'] do %>
+            <%= f.label :meta_description, Spree.t(:meta_description) %>
+            <%= f.text_area :meta_description, class: 'form-control' %>
+          <% end %>
+        </div>
+
+        <div data-hook="admin_product_form_additional_fields"></div>
+
+      </div>
+
     </div>
 
     <div class="col-12 col-md-4" data-hook="admin_product_form_right">
@@ -69,11 +134,8 @@
                data-alt-format="<%= Spree.t(:fpr_human_friendly_date_format, scope: 'date_picker', default: 'M j, Y') %>"
                data-max-date="<%= @product.discontinue_on %>">
 
-            <%= f.text_field :available_on,
-                             value: datepicker_field_value(@product.available_on),
-                             placeholder: Spree.t(:select_a_date),
-                             class: 'form-control shadow-none ',
-                             'data-input':'' %>
+            <%= f.text_field :available_on, value: datepicker_field_value(@product.available_on), placeholder: Spree.t(:select_a_date),
+                             class: 'form-control shadow-none ', 'data-input':'' %>
 
             <%= render partial: 'spree/admin/shared/cal_close' %>
           </div>
@@ -90,11 +152,8 @@
                data-alt-format="<%= Spree.t(:fpr_human_friendly_date_format, scope: 'date_picker', default: 'M j, Y') %>"
                data-min-date="<%= @product.available_on %>">
 
-            <%= f.text_field :discontinue_on,
-                              value: datepicker_field_value(@product.discontinue_on),
-                              placeholder: Spree.t(:select_a_date),
-                              class: 'form-control shadow-none ',
-                              'data-input':'' %>
+            <%= f.text_field :discontinue_on,  value: datepicker_field_value(@product.discontinue_on), placeholder: Spree.t(:select_a_date),
+                              class: 'form-control shadow-none ', 'data-input':'' %>
 
             <%= render partial: 'spree/admin/shared/cal_close' %>
           </div>
@@ -189,67 +248,4 @@
 
   </div>
 
-  <div data-hook="admin_product_form_taxons">
-    <%= f.field_container :taxons, class: ['form-group'] do %>
-      <%= f.label :taxon_ids, Spree.t(:taxons) %>
-
-      <% if can? :modify, Spree::Classification %>
-        <%= f.select :taxon_ids, options_from_collection_for_select(@product.taxons, :id, :pretty_name, @product.taxons.pluck(:id)), { include_hidden: true }, multiple: true, class: 'select2-hidden-accessible' %>
-      <% elsif @product.taxons.any? %>
-        <ul class="text_list">
-          <% @product.taxons.each do |taxon| %>
-            <li><%= taxon.name %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <div class="alert alert-info"><%= Spree.t(:no_resource_found, resource: :taxons) %></div>
-      <% end %>
-
-    <% end %>
-  </div>
-
-  <div data-hook="admin_product_form_option_types">
-    <%= f.field_container :option_types, class: ['form-group'] do %>
-      <%= f.label :option_type_ids, Spree.t(:option_types) %>
-
-      <% if can? :modify, Spree::ProductOptionType %>
-        <%= f.select :option_type_ids, options_from_collection_for_select(Spree::OptionType.all, :id, :name, @product.option_types.pluck(:id)), { include_hidden: true }, multiple: true, class: 'select2-hidden-accessible' %>
-      <% elsif @product.option_types.any? %>
-        <ul class="text_list">
-          <% @product.option_types.each do |type| %>
-            <li><%= type.presentation %> (<%= type.name %>)</li>
-          <% end %>
-        </ul>
-      <% else %>
-        <div class="alert alert-info"><%= Spree.t(:no_resource_found, resource: :option_types) %></div>
-      <% end %>
-
-    <% end %>
-  </div>
-
-  <div data-hook="admin_product_form_meta">
-    <div data-hook="admin_product_form_meta_title">
-      <%= f.field_container :meta_title, class: ['form-group'] do %>
-        <%= f.label :meta_title, Spree.t(:meta_title) %>
-        <%= f.text_field :meta_title, class: 'form-control' %>
-      <% end %>
-    </div>
-
-    <div data-hook="admin_product_form_meta_keywords">
-      <%= f.field_container :meta_keywords, class: ['form-group'] do %>
-        <%= f.label :meta_keywords, Spree.t(:meta_keywords) %>
-        <%= f.text_field :meta_keywords, class: 'form-control' %>
-      <% end %>
-    </div>
-
-    <div data-hook="admin_product_form_meta_description">
-      <%= f.field_container :meta_description, class: ['form-group'] do %>
-        <%= f.label :meta_description, Spree.t(:meta_description) %>
-        <%= f.text_area :meta_description, class: 'form-control' %>
-      <% end %>
-    </div>
-
-    <div data-hook="admin_product_form_additional_fields"></div>
-
-  </div>
 </div>
