@@ -23,6 +23,5 @@ plugins:
   - table
   - directionality
   - contextmenu
-  - layer
   - wordcount
   - lists
