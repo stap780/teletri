@@ -4,17 +4,27 @@
     <% end %>
     <% Spree::Taxonomy.order(:id).each do |taxonomy| %>
     <div class="h5"><strong><%= taxonomy.name %></strong></div>
-      <%# Оставил этот вариант %>
-      <%= form.collection_check_boxes :taxon_ids, taxonomy.taxons, :id, :pretty_name , multiple: true do |b|%>
-        <div class="form-check">
-          <%= b.label class: 'form-check-label' do %>
-            <%= b.check_box class: 'form-check-input' %>
-            <%= b.text  %>
-          <% end %>
-        </div>
-      <% end %>
+    <%# Оставил этот вариант #3 - тут есть иерархия%>
+    <% ordered_taxon = nested_set_options(taxonomy.taxons){ |i| "#{'-' * i.level} #{i.name} (#{i.products.count})" }%>
+    <%= form.collection_check_boxes :taxon_ids, ordered_taxon, :last, :first , multiple: true do |b|%>
+      <div class="form-check">
+        <%= b.label class: 'form-check-label' do %>
+          <%= b.check_box class: 'form-check-input' %>
+          <%= b.text  %>
+        <% end %>
+      </div>
+    <% end %>
+      <%# Этот вариант (#1) убрал - %>
+      <%# form.collection_check_boxes :taxon_ids, taxonomy.taxons.order(:id), :id, :pretty_name , multiple: true do |b|%>
+        <!-- <div class="form-check"> -->
+          <%# b.label class: 'form-check-label' do %>
+            <%# b.check_box class: 'form-check-input' %>
+            <%# b.text  %>
+          <%# end %>
+        <!-- </div> -->
+      <%# end %>
 
-      <%# #Этот вариант убрал - он немного в другом виде передавал данные. Но пригодится для чистых чекбоксов
+      <%# #Этот вариант (#2) убрал - он немного в другом виде передавал данные. Но пригодится для чистых чекбоксов
       <%# fields_for :taxon_ids do |f| %>
         <%# taxonomy.taxons.each do |taxon| %>
         <!-- <div class="form-check"> -->
