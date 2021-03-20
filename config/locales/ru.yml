@@ -172,7 +172,7 @@ ru:
         spree/classification:
           attributes:
             taxon_id:
-              already_linked:
+              already_linked: "уже добавлен к продукту"
         spree/credit_card:
           attributes:
             base:

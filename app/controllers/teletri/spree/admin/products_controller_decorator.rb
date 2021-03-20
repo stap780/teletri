@@ -42,14 +42,19 @@ module Teletri
         def update_multiple_products_taxon
           @products = ::Spree::Product.find(params[:product_ids]) #.reject!(&:blank?)
           taxon_ids = params[:taxon_ids].reject!(&:blank?)
-          puts taxon_ids
+          puts "taxon_ids - "+taxon_ids.to_s
       		@products.each do |pr|
             new_taxons = []
             taxon_ids.each do |tx|
-              new_taxons = pr.taxon_ids.push(tx)
+              puts tx.to_i
+              if !pr.taxon_ids.include?(tx.to_i)
+                new_taxons = pr.taxon_ids.push(tx.to_i)
+              else
+                new_taxons = pr.taxon_ids
+              end
             end
-            pr.taxon_ids = new_taxons.uniq
-            pr.save
+            puts "new_taxons - "+new_taxons.uniq.to_s
+            pr.update!(taxon_ids: new_taxons.uniq)
       		end
       		flash[:notice] = 'products taxon обновлены'
       		redirect_to collection_url
