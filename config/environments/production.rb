@@ -84,9 +84,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.deface.enabled = false
+  config.deface.enabled = true
 
   # Store files locally.
   config.active_storage.service = :local
-  
+
 end
