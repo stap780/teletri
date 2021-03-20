@@ -1,0 +1,22 @@
+<%= form_with url: update_multiple_products_taxon_admin_products_path, method: :put %>
+    <%@products.each do |pr|%>
+      <%= hidden_field_tag "product_ids[]", pr.id , id: "product_id_"+pr.id.to_s%>
+    <% end %>
+    <% Spree::Taxonomy.order(:id).each do |taxonomy| %>
+    <%= taxonomy.name %>
+    	<%= fields_for :product_attr do |f| %>
+        <%= f.collection_check_boxes :taxon_ids, taxonomy.taxons, :id, :name , multiple: true do |b|%>
+          <div class="form-check">
+            <%= b.label class: 'form-check-label' do %>
+              <%= b.check_box class: 'form-check-input' %>
+              <%= b.text  %>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+    <div class="form-group mt-3">
+      <%= submit_tag "Обновить", class: "btn btn-primary" %>
+      <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Отменить</button>
+    </div>
+<% end %>

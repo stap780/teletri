@@ -50,7 +50,7 @@
 
 <% if @collection.any? %>
 <div class="table-responsive">
-  <table class="table" id="listing_products">
+  <table class="table">
     <thead>
       <tr data-hook="admin_products_index_headers">
         <th><%= check_box_tag 'selectAll', value = 'selectAll'%></th>
@@ -63,7 +63,7 @@
         <th scope="col" data-hook="admin_products_index_header_actions" class="actions"></th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="listing_products">
       <% @collection.each do |product| %>
         <% available_status = available_status(product) %>
           <tr <%== "style='color: red;'" if product.deleted? %> id="<%= spree_dom_id product %>" data-hook="admin_products_index_rows" class="<%= cycle('odd', 'even') %>">
@@ -97,3 +97,4 @@
 <% end %>
 
 <%= render partial: 'spree/admin/shared/index_table_options', locals: { collection: @collection } %>
+<%= render partial: 'spree/admin/shared/ketago_modal_edit' %>

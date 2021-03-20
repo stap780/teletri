@@ -1,0 +1,8 @@
+<% pegeTitle = content_for :page_title%>
+<% if pegeTitle.strip == 'Товары' %>
+  <%= form_with url: delete_selected_admin_products_path, method: :post do |f| %>
+    <%= f.hidden_field :delete_product_ids, id: 'delete_product_ids'  %>
+    <%= f.submit "Delete selected", class: 'btn btn-secondary', id: 'deleteAll' %>
+  <% end %>
+  <%= link_to 'Update taxon', edit_multiple_product_taxon_admin_products_path, class: 'btn btn-secondary', id: 'updateTaxon', remote: true, data: { toggle: 'modal', 'target': '#modal-edit' } %>
+<% end %>

@@ -9,4 +9,21 @@ Rails.application.routes.draw do
   # the default of "spree".
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # post "/admin/products/delete_selected", to: "spree/admin/products#delete_selected", as: "delete_selected_admin_product"
+  Spree::Core::Engine.add_routes do
+
+    namespace :admin, path: Spree.admin_path do
+
+      resources :products do
+        collection do
+          post :delete_selected
+          get :edit_multiple_product_taxon
+          put :update_multiple_products_taxon
+        end
+      end
+
+    end
+
+  end
+
 end

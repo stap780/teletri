@@ -6,9 +6,7 @@
         <% if content_for?(:page_title) %>
           <h1 class="contextual-title px-0 mb-0 col">
             <%= yield :page_title %>
-            <% if content_for?(:page_title_small) %>
-              <small><%= yield :page_title_small %></small>
-            <% end %>
+            <% if content_for?(:page_title_small) %>  <small><%= yield :page_title_small %></small><% end %>
           </h1>
         <% end %>
 
@@ -20,12 +18,8 @@
 
         <% if content_for?(:page_actions) || content_for?(:sidebar) %>
           <div class="d-flex d-lg-none justify-content-end m-0 p-0">
-            <button type="button"
-                    id="contextual-menu-toggle"
-                    class="btn btn-outline-secondary shadow-none">
-                    <span class="d-none d-sm-inline">
-                      <%= Spree.t('more') %>
-                    </span>
+            <button type="button" id="contextual-menu-toggle" class="btn btn-outline-secondary shadow-none">
+                    <span class="d-none d-sm-inline"><%= Spree.t('more') %></span>
                     <%= svg_icon name: "chevron-down.svg", width: '16', height: '16' %>
             </button>
           </div>
@@ -34,9 +28,7 @@
 
       <% if content_for?(:page_tabs) %>
         <div class="row">
-          <ul class="nav nav-tabs w-100 mt-4 px-0">
-            <%= yield :page_tabs %>
-          </ul>
+          <ul class="nav nav-tabs w-100 mt-4 px-0"><%= yield :page_tabs %></ul>
         </div>
       <% end %>
 

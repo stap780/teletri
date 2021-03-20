@@ -22,6 +22,5 @@ plugins:
   - media
   - table
   - directionality
-  - contextmenu
   - wordcount
   - lists
