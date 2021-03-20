@@ -35,6 +35,19 @@ lock "~> 3.16.0"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+namespace :deface do
+  desc "Pre-compile Deface overrides into templates"
+  task :precompile do
+    on roles(:app) do
+      within release_path do
+        with rails_env: fetch(:rails_env), deface_enabled: true do
+          execute :rake, 'deface:precompile'
+        end
+      end
+    end
+  end
+end
+
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 set :application, 'teletri'
