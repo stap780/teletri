@@ -4,6 +4,7 @@
     <%= render 'header', taxon: @taxon %>
   </div>
   <%= render 'subcategories', taxon: @taxon %>
+  <%# render 'subcategories_vertical' , taxon: @taxon%>
   <div data-hook="taxon_products">
     <%= render template: 'spree/products/index', colors: @colors, sizes: @sizes %>
   </div>

@@ -1,5 +1,5 @@
 <% cache spree_nav_cache_key('footer') do %>
-  <footer id="footer" class="pt-2 mx-auto border-top footer-spree" data-turbolinks-permanent>
+  <footer id="footer" class="mt-5 pt-2 mx-auto border-top footer-spree" data-turbolinks-permanent>
     <div class="container">
       <div class="row d-none justify-content-xl-around pb-xl-5 ">
         <div class="d-flex d-xl-block flex-xl-grow-0 col-xl-4">
@@ -52,7 +52,7 @@
               <div class="footer-spree-label">
                 <%= link_to root[:title], root[:url] %>
               </div>
-              <% if  root[:items].present? %>
+              <% if root[:items].present? %>
                 <% root[:items].each do |item| %>
                   <div class="pt-2"><%= link_to item[:title], item[:url] %></div>
                 <% end %>
@@ -67,6 +67,15 @@
             </div>
             <div class="pt-2">
               <%= link_to Spree.t(:my_orders).upcase, spree.account_path(anchor: "account-my-orders") %>
+            </div>
+            <div class="pt-2">
+              <%= link_to "Контакты", '/contact' %>
+            </div>
+            <div class="pt-2">
+              <%= link_to "Доставка", '/delivery' %>
+            </div>
+            <div class="pt-2">
+              <%= link_to "Оплата", '/payment' %>
             </div>
           </div>
         <% end %>

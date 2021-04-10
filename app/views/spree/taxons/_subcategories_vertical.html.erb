@@ -1,0 +1,18 @@
+
+<% cache([base_cache_key, taxon, 'subcategories', permitted_product_params]) do %>
+  <% subcategories = [taxon] %>
+  <% unless taxon.children.any? %>
+    <% subcategories.unshift(taxon.parent) %><% end %>
+    <% subcategories.compact.each do |current_taxon| %>
+      <% child_taxons = [current_taxon, *current_taxon.children.where(hide_from_nav: false)] %>
+        <% if current_taxon.level > 0 && child_taxons.size > 1 %>
+          <div class="expand-lg" id="categoriesMenu">
+            <div class="nav nav-pills flex-column mt-4 mt-lg-0">
+              <% child_taxons.each_with_index.map do |subcategory, index| %>
+                <%= link_to subcategory.name, spree.nested_taxons_path(subcategory, params: permitted_product_params), class: "nav-link d-flex justify-content-between mb-1 pl-0"%>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+  <% end %>
