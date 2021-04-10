@@ -3,6 +3,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
 ruby '2.5.0'
 gem 'rails', '>= 6.0'
 gem 'puma', '~> 3.0'
@@ -10,20 +11,14 @@ gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
-group :development, :test do
-  gem 'byebug', platform: :mri
-end
-group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-end
+
 gem 'rest-client', '~> 2.1'
 gem 'figaro'
 gem 'pg', '~> 1.1'
 gem 'tinymce-rails'
 gem 'tinymce-rails-langs'
+gem 'bcrypt_pbkdf', '< 2.0', :require => false
+gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'spree', '~> 4.2.0'
 gem 'spree_auth_devise', '~> 4.3'
 gem 'spree_gateway', '~> 3.9'
@@ -36,6 +31,10 @@ gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'spree_analytics_trackers', '~> 2.0'
 
 group :development do
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '~> 3.0.5'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'capistrano'#, '~> 3.0.1'
   gem 'capistrano-bundler'
@@ -44,9 +43,14 @@ group :development do
   gem 'capistrano-rvm'#, '~> 0.1.1'
   gem 'capistrano3-unicorn'
   gem 'capistrano-spree'
-  gem 'hub', :require=>nil
+  gem 'hub', :require => nil
   gem 'rails_layout'
 end
+
+group :development, :test do
+  gem 'byebug', platform: :mri
+end
+
 group :production do
   gem 'unicorn'
 end
