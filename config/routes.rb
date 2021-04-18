@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # post "/admin/products/delete_selected", to: "spree/admin/products#delete_selected", as: "delete_selected_admin_product"
   Spree::Core::Engine.add_routes do
 
+
     namespace :admin, path: Spree.admin_path do
 
       resources :products do
