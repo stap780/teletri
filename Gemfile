@@ -19,6 +19,8 @@ gem 'tinymce-rails'
 gem 'tinymce-rails-langs'
 gem 'bcrypt_pbkdf', '< 2.0', :require => false
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
+gem 'roo', '2.4'
+gem 'roo-xls'
 gem 'spree', '~> 4.2.0'
 gem 'spree_auth_devise', '~> 4.3'
 gem 'spree_gateway', '~> 3.9'
