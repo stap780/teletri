@@ -2,7 +2,7 @@
 namespace :gstele do
   desc "gstele"
 
-  task spree_update_jabra: :environment do
+  task spree_update_gstele: :environment do
     puts 'Обновляем gstele' +" Время -"+"#{Time.zone.now}"
 
     pr_jabra = Spree::Product.where('name LIKE ?', '%Jabra%' )
@@ -35,35 +35,43 @@ namespace :gstele do
   			title_file = spreadsheet.cell(i,'B')
   			price_file = spreadsheet.cell(i,'D')
   			valute = spreadsheet.cell(i,'E')
-  			quantity = spreadsheet.cell(i,'C')
+  			quantity = spreadsheet.cell(i,'C').present? ? spreadsheet.cell(i,'C') : 0
 
   			if file == "#{Rails.public_path}"+"/jabra.csv"
   				cost_price = (price_file.to_f - (price_file.to_f*0.43).to_f).round(2)
   				sale_price = (cost_price.to_f + cost_price.to_f*0.45).round(2)
 
-          add_price = Spree::Price.new( currency: "EUR", amount: sale_price.to_f)
+  				add_price = Spree::Price.new( currency: "EUR", amount: sale_price.to_f)
   				vendor = 'Jabra'
-          title = title_file
-          description = title_file
+  				title = title_file
+  				description = title_file
   			else
   				# cost_price = (price_file.to_f * 0.85).to_f.round(2)
   				sale_price = (price_file.to_f - (price_file.to_f*0.10).to_f).round(2) #это для файла snom так как там доллары
-          add_price = Spree::Price.new( currency: "USD", amount: sale_price.to_f)
+  				add_price = Spree::Price.new( currency: "USD", amount: sale_price.to_f)
   				vendor = 'Snom'
-          title = title_file.gsub('Телефон','').gsub('snom','Snom')
-          description = "телефон"
+  				title = title_file.present? ? title_file.gsub('Телефон','').gsub('snom','Snom') : nil
+  				description = "телефон"
   			end
 
-  			product = Spree::Product.find_by_sku(sku)
-  				if product
-			      product.master.prices << add_price
-            product.stock_items.first.adjust_count_on_hand(quantity)
-  				else
-            product = Spree::Product.create!(sku: sku, name: title, shipping_category_id: 1, description: description)
-    				product.stock_items.first.adjust_count_on_hand(quantity)
-            product.master.prices << add_price
-            product_proper = Spree::ProductProperty.create!( property_name: 'Производитель', value: vendor )
-      			product.product_properties << product_proper
+  			puts "sku - "+sku.to_s+" title - "+title.to_s
+
+  			variant = Spree::Variant.find_by_sku(sku)
+			if variant
+				product = variant.product
+# 				puts product.slug.to_s
+		    	product.master.prices << add_price
+# 		    	puts quantity.to_s
+# 		    	puts product.stock_items.first.count_on_hand.to_s
+				product.stock_items.first.adjust_count_on_hand(quantity.to_i)
+			else
+				if title.present?
+				new_product = Spree::Product.create!(sku: sku, name: title, shipping_category_id: 1, description: description, price: 0)
+				new_product.stock_items.first.adjust_count_on_hand(quantity.to_i)
+				new_product.master.prices << add_price
+				product_proper = Spree::ProductProperty.create!( property_name: 'Производитель', value: vendor )
+				new_product.product_properties << product_proper
+				end
   			end
   		end
   	end

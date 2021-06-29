@@ -21,6 +21,7 @@ gem 'bcrypt_pbkdf', '< 2.0', :require => false
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'roo', '2.4'
 gem 'roo-xls'
+gem 'whenever', require: false
 gem 'spree', '~> 4.2.0'
 gem 'spree_auth_devise', '~> 4.3'
 gem 'spree_gateway', '~> 3.9'
@@ -31,6 +32,7 @@ gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
 gem 'spree_volume_pricing', github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'spree_analytics_trackers', '~> 2.0'
+gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

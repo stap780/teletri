@@ -5,12 +5,12 @@
         © <%= Time.current.year %>
         <%= link_to current_store.name, "https://#{current_store.url}" %>.
         <%= Spree.t(:all_rights_reserved) %>.
-        <% if current_store.contact_phone&.present? %>
-          <%= Spree.t(:call_us_now) %>: <%= current_store.contact_phone %>
-        <% end %>
-        <% if current_store.customer_support_email&.present? %>
-          <%= Spree.t(:email) %>: <%= current_store.customer_support_email %>
-        <% end %>
+        <%# if current_store.contact_phone&.present? %>
+          <%# Spree.t(:call_us_now) %> <%# current_store.contact_phone %>
+        <%# end %>
+        <%# if current_store.customer_support_email&.present? %>
+          <%# Spree.t(:email) %> <%# current_store.customer_support_email %>
+        <%# end %>
       </div>
       <div class="d-none d-lg-inline-block mr-2">|</div>
       <div>Создано в <%= link_to  'Ketago', 'https://ketago.com/', target: :blank, 'aria-label': 'Go to Ketago' %></div>
