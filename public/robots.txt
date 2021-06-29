@@ -14,3 +14,4 @@ Disallow: /password
 Disallow: /api_tokens
 Disallow: /cart_link
 Disallow: /account_link
+Sitemap: http://www.teletri.ru/sitemap.xml.gz

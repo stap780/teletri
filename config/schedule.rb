@@ -28,3 +28,7 @@ every 1.day, :at => '15:15' do #
 #   runner "User.service_end_email"
   rake "gstele:spree_update_gstele"
 end
+
+every 1.day, at: '19:00' do
+  rake '-s sitemap:refresh'
+end
