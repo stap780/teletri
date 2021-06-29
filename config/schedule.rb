@@ -18,13 +18,19 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+# Learn more: http://github.com/javan/whenever
+# очистить cron -> crontab -r
+# просмотр cron -> crontab -l
+# сохранение и запуск cron в режиме девелопмент (писать в терминале) ->  whenever --set environment='development' --write-crontab или
+# RAILS_ENV=development whenever --write-crontab
+# RAILS_ENV=production whenever --write-crontab
 
 env :PATH, ENV['PATH']
 env "GEM_HOME", ENV["GEM_HOME"]
 set :output, "#{path}/log/cron.log"
 set :chronic_options, :hours24 => true
 
-every 1.day, :at => '15:15' do #
+every 1.day, :at => '15:45' do #
 #   runner "User.service_end_email"
   rake "gstele:spree_update_gstele"
 end
