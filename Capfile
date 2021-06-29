@@ -29,6 +29,7 @@ install_plugin Capistrano::SCM::Git
 require 'capistrano/rails'
 require "capistrano/rvm"
 require 'capistrano3/unicorn'
+require "whenever/capistrano"
 require 'capistrano/rails/console'
 require 'capistrano/spree'
 
