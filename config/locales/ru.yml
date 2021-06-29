@@ -893,6 +893,7 @@ ru:
       show_user_menu: "Личный кабинет"
       desktop: 'nav_bar_desktop'
       mobile: 'nav_bar_mobile'
+      show_menu: 'menu'
     new: "Новый"
     new_adjustment: "Новая корректировка"
     new_country: "Новая страна"

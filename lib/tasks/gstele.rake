@@ -15,7 +15,7 @@ namespace :gstele do
     end
   	# Gstele.update_all price: 0
   	# Gstele.update_all cost_price: 0
-      uri = ["http://www.gstele.com/stock/jabra/csv.php", "http://www.gstele.com/stock/snom/csv.php"]
+      uri = ["http://www.gstele.com/stock/jabra/csv.php"]#, "http://www.gstele.com/stock/snom/csv.php"]
       uri.each do |uri|
   		if uri == "http://www.gstele.com/stock/jabra/csv.php"
   			download_path = "#{Rails.public_path}"+"/jabra.csv"
