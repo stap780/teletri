@@ -1,6 +1,7 @@
 
 <% cache([base_cache_key, taxon, 'subcategories', permitted_product_params]) do %>
   <% subcategories = [taxon] %>
+  <% if taxon.present? %>
   <% unless taxon.children.any? %>
     <% subcategories.unshift(taxon.parent) %><% end %>
     <% subcategories.compact.each do |current_taxon| %>
@@ -15,4 +16,5 @@
           </div>
         <% end %>
       <% end %>
+  <% end %>
   <% end %>
