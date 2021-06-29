@@ -30,7 +30,7 @@ env "GEM_HOME", ENV["GEM_HOME"]
 set :output, "#{path}/log/cron.log"
 set :chronic_options, :hours24 => true
 
-every 1.day, :at => '16:05' do #
+every 1.day, :at => '18:25' do #
 #   runner "User.service_end_email"
   rake "gstele:spree_update_gstele"
 end
