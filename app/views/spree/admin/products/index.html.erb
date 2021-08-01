@@ -24,6 +24,11 @@
             <%= f.text_field :variants_including_master_sku_cont, size: 15, class: "form-control js-filterable" %>
           </div>
         </div>
+        <div class="col-12 col-lg-6">
+          <div class="form-group">
+            <%= f.select :search_by_property_value, Spree::Product.all.map{|pr| pr.property('manufacturer')}.uniq, { :prompt => 'Бренд'}, class: "form-control js-filterable" %>
+          </div>
+        </div>
         <div class="col-12">
           <div class="field checkbox mb-2">
             <label>

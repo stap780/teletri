@@ -79,4 +79,8 @@ namespace :ins3 do
 		puts 'finish '+Time.now.to_s
 	end
 
+  # property = Spree::Property.first
+  # products = Spree::Product.all.select{|pr| pr.property(proper1.name)}
+  # products = Spree::Product.all.map{|pr| pr.property(proper1.name)}.uniq
+
 end

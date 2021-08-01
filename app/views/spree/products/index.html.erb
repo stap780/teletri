@@ -18,11 +18,9 @@
     <% elsif not @taxon %>
       <div id="no-taxon-banner">
         <div class="container">
-          <%= lazy_image(
-            src: asset_path('homepage/products.jpg'),
+          <%= lazy_image( src: asset_path('homepage/products.jpg'),
             alt: 'products-banner',
-            width: 1110,
-            height: 300,
+            width: 1110,  height: 300,
             class: 'w-100 d-none d-md-block'
           ) %>
         </div>
