@@ -10,6 +10,15 @@ GIT
       spree_extension
 
 GIT
+  remote: https://github.com/spree-contrib/spree_mail_settings.git
+  revision: 167bf5349cfcc8764ab599ce7c80c07348af2d6a
+  specs:
+    spree_mail_settings (3.3.0)
+      spree_auth_devise (>= 3.7.0, < 5.0)
+      spree_backend (>= 3.7.0, < 5.0)
+      spree_core (>= 3.7.0, < 5.0)
+
+GIT
   remote: https://github.com/spree-contrib/spree_related_products.git
   revision: af4d7b9c016a8b18de2f0057806c4a2e5e70de5a
   specs:
@@ -138,8 +147,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
-    autoprefixer-rails (10.2.5.1)
-      execjs (> 0)
+    autoprefixer-rails (10.3.1.0)
+      execjs (~> 2)
     awesome_nested_set (3.4.0)
       activerecord (>= 4.0.0, < 7.0)
     bcrypt (3.1.16)
@@ -235,8 +244,8 @@ GEM
     flatpickr (4.6.6.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (0.5.2)
+      activesupport (>= 5.0)
     glyphicons (1.0.2)
     hashie (4.1.0)
     highline (2.0.3)
@@ -296,7 +305,7 @@ GEM
     mime-types-data (3.2021.0704)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
-    mini_portile2 (2.5.3)
+    mini_portile2 (2.6.1)
     minitest (5.14.4)
     monetize (1.11.0)
       money (~> 6.12)
@@ -309,9 +318,9 @@ GEM
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
     netrc (0.11.0)
-    nio4r (2.5.7)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nio4r (2.5.8)
+    nokogiri (1.12.2)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     oa-core (0.3.2)
     oauth (0.5.6)
@@ -623,6 +632,7 @@ DEPENDENCIES
   spree_auth_devise (~> 4.3)
   spree_gateway (~> 3.9)
   spree_i18n (~> 5.0)
+  spree_mail_settings!
   spree_product_feed!
   spree_related_products!
   spree_sitemap!
@@ -638,8 +648,5 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   whenever
 
-RUBY VERSION
-   ruby 2.5.0p0
-
 BUNDLED WITH
-   2.1.4
+   1.16.6

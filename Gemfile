@@ -4,7 +4,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.5.0'
+#ruby '2.6.3'
 gem 'rails', '>= 6.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails'
@@ -35,6 +35,7 @@ gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'spree_analytics_trackers', '~> 2.0'
 gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap'
 gem 'spree_product_feed', github: 'matthewkennedy/spree_product_feed'
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
