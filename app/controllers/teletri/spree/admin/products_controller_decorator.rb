@@ -18,7 +18,7 @@ module Teletri
           puts @object
           products = ::Spree::Product.where(id: params[:delete_product_ids]) # friendly - только в товарах и наверно в taxon
           products.each do |product|
-            product.destroy
+            product.delete
           end
           respond_to do |format|
             format.html { redirect_to collection_url }
