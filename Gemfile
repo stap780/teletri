@@ -6,7 +6,7 @@ gem 'rails', '~> 7.2.1.2'
 
 gem 'pg', '~> 1.1'
 
-gem 'puma', '>= 5.0'
+gem 'puma', '>= 6.0'
 
 gem 'importmap-rails'
 

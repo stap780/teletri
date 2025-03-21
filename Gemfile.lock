@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/spree/spree.git
-  revision: ba96ff7b6b09eeab53d2777de3056c7b940ed0ef
+  revision: bf164fc847e6a9559bf34cb19677cb8019bb68b7
   branch: main
   specs:
     spree (5.0.0.alpha)
@@ -267,7 +267,7 @@ GEM
     country_select (8.0.3)
       countries (~> 5.0)
     crass (1.0.6)
-    csv (3.3.2)
+    csv (3.3.3)
     currency_select (8.1.0)
       actionview (>= 7.0.0, < 8.1)
       money (~> 6.0)
@@ -710,7 +710,7 @@ DEPENDENCIES
   mini_racer
   mission_control-jobs
   pg (~> 1.1)
-  puma (>= 5.0)
+  puma (>= 6.0)
   rails (~> 7.2.1.2)
   selenium-webdriver
   solid_cache
