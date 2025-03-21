@@ -36,3 +36,4 @@ LoadError: Could not open library 'vips.so.42'
 ```
 
 Please check that libvips is installed with `vips -v`, and if it is not installed, follow [installation instructions here](https://www.libvips.org/install.html).
+# teletri
