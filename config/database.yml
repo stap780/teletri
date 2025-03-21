@@ -22,14 +22,14 @@ default: &default
 development: &development
   primary:
     <<: *default
-    database: spree_starter_development
+    database: teletri_development
     host: <%= ENV.fetch('DB_HOST', 'localhost') %>
     username: <%= ENV.fetch('DB_USER', 'postgres') %>
     password: <%= ENV.fetch('DB_PASSWORD', 'password') %>
     port: <%= ENV.fetch('DB_PORT', 5432) %>
   queue:
     <<: *default
-    database: spree_starter_development_queue
+    database: teletri_development_queue
     host: <%= ENV.fetch('QUEUE_DB_HOST', 'localhost') %>
     username: <%= ENV.fetch('QUEUE_DB_USER', 'postgres') %>
     password: <%= ENV.fetch('QUEUE_DB_PASSWORD', 'password') %>
@@ -40,7 +40,7 @@ development: &development
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: spree_starter
+  #username: teletri
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -69,14 +69,14 @@ development: &development
 test:
   primary:
     <<: *default
-    database: spree_starter_test
+    database: teletri_test
     host: <%= ENV.fetch('DB_HOST', 'localhost') %>
     username: <%= ENV.fetch('DB_USER', 'postgres') %>
     password: <%= ENV.fetch('DB_PASSWORD', 'password') %>
     port: <%= ENV.fetch('DB_PORT', 5432) %>
   queue:
     <<: *default
-    database: spree_starter_test_queue
+    database: teletri_test_queue
     host: <%= ENV.fetch('QUEUE_DB_HOST', 'localhost') %>
     username: <%= ENV.fetch('QUEUE_DB_USER', 'postgres') %>
     password: <%= ENV.fetch('QUEUE_DB_PASSWORD', 'password') %>
