@@ -1,12 +1,15 @@
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.19.2'
 
-server '91.210.169.10', user: 'deploy', roles: %w{app db web}
+server '91.210.169.10', user: 'deploy', roles: %w[app db web]
 
 set :application, 'teletri'
 set :repo_url, "git@github.com:stap780/#{fetch(:application)}.git"
 
 set :user, 'deploy'
+
+# NOTICE this is livehack for 'capistrano3-puma', '6.0.0.beta.1'
+set :systemctl_user, :system
 
 set :branch, 'main'
 set :pty,             true
