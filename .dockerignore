@@ -35,3 +35,7 @@
 /app/assets/builds/*
 !/app/assets/builds/.keep
 /public/assets
+
+/.kamal/secrets
+.DS_Store
+/z-help.txt
