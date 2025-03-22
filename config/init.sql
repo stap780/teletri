@@ -1,2 +1,0 @@
-CREATE DATABASE teletri_production;
-CREATE DATABASE teletri_production_queue;

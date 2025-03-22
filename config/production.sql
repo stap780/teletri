@@ -1,0 +1,4 @@
+CREATE DATABASE teletri_production;
+CREATE DATABASE teletri_production_cache;
+CREATE DATABASE teletri_production_queue;
+CREATE DATABASE teletri_production_cable;
