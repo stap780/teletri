@@ -88,9 +88,13 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  primary:
+  primary: &primary_production
     <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
+    database: teletri_production
+    username: <%= ENV.fetch('POSTGRES_USER', 'postgres') %>
+    password: <%= ENV.fetch('POSTGRES_PASSWORD', 'password') %>
+    host: localhost
   queue:
-    <<: *default
-    url: <%= ENV['QUEUE_DATABASE_URL'] %>
+    <<: *primary_production
+    database: teletri_production_queue
+    migrations_paths: db/queue_migrate

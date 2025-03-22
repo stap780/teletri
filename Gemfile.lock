@@ -203,8 +203,6 @@ GEM
       activesupport (>= 6.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    airbrussh (1.5.3)
-      sshkit (>= 1.6.1, != 1.7.0)
     any_ascii (0.3.2)
     auto_strip_attributes (2.6.0)
       activerecord (>= 4.0)
@@ -214,6 +212,9 @@ GEM
       activerecord (>= 4.0.0, < 8.1)
     base64 (0.2.0)
     bcrypt (3.1.20)
+    bcrypt_pbkdf (1.1.1)
+    bcrypt_pbkdf (1.1.1-arm64-darwin)
+    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
     bindex (0.8.1)
@@ -226,26 +227,6 @@ GEM
     cancancan (3.6.1)
     canonical-rails (0.2.17)
       actionview (>= 4.1, < 8.1)
-    capistrano (3.19.2)
-      airbrussh (>= 1.0.0)
-      i18n
-      rake (>= 10.0.0)
-      sshkit (>= 1.9.0)
-    capistrano-bundler (2.1.1)
-      capistrano (~> 3.1)
-    capistrano-rails (1.7.0)
-      capistrano (~> 3.1)
-      capistrano-bundler (>= 1.1, < 3)
-    capistrano-rails-console (2.3.0)
-      capistrano (>= 3.5.0, < 4.0.0)
-      sshkit-interactive (~> 0.3.0)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
-    capistrano3-puma (6.0.0)
-      capistrano (~> 3.7)
-      capistrano-bundler
-      puma (>= 5.1, < 7.0)
     capybara (3.40.0)
       addressable
       matrix
@@ -286,7 +267,9 @@ GEM
       warden (~> 1.2.3)
     doorkeeper (5.8.1)
       railties (>= 5)
+    dotenv (3.1.7)
     drb (2.2.1)
+    ed25519 (1.3.0)
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
@@ -363,6 +346,17 @@ GEM
     json (2.10.2)
     jsonapi-serializer (2.2.0)
       activesupport (>= 4.2)
+    kamal (2.5.3)
+      activesupport (>= 7.0)
+      base64 (~> 0.2)
+      bcrypt_pbkdf (~> 1.0)
+      concurrent-ruby (~> 1.2)
+      dotenv (~> 3.1)
+      ed25519 (~> 1.2)
+      net-ssh (~> 7.3)
+      sshkit (>= 1.23.0, < 2.0)
+      thor (~> 1.3)
+      zeitwerk (>= 2.6.18, < 3.0)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -618,8 +612,6 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
-    sshkit-interactive (0.3.0)
-      sshkit (~> 1.12)
     state_machines (0.6.0)
     state_machines-activemodel (0.9.0)
       activemodel (>= 6.0)
@@ -694,18 +686,13 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  capistrano
-  capistrano-bundler
-  capistrano-rails
-  capistrano-rails-console
-  capistrano-rvm
-  capistrano3-puma
   capybara
   debug
   devise
   image_processing (~> 1.13)
   importmap-rails
   jbuilder
+  kamal
   letter_opener
   mini_racer
   mission_control-jobs

@@ -53,12 +53,13 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem 'capistrano', require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rails', require: false
-  gem 'capistrano-rails-console', require: false
-  gem 'capistrano-rvm', require: false
-  gem 'capistrano3-puma', require: false
+
+  # gem 'capistrano', require: false
+  # gem 'capistrano-bundler', require: false
+  # gem 'capistrano-rails', require: false
+  # gem 'capistrano-rails-console', require: false
+  # gem 'capistrano-rvm', require: false
+  # gem 'capistrano3-puma', require: false
 end
 
 group :test do
@@ -90,3 +91,5 @@ gem 'spree_admin', spree_opts
 gem 'spree_storefront', spree_opts
 gem 'spree_stripe', { 'github': 'spree/spree_stripe', 'branch': 'main' }
 gem 'spree_i18n'
+
+gem 'kamal'
