@@ -45,7 +45,7 @@ env:
 accessories:
   db:
     image: postgres:15
-    host: 82.97.252.66
+    host: teletri.ru
     port: "127.0.0.1:5432:5432"
     env:
       clear:
