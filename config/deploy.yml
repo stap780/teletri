@@ -44,7 +44,7 @@ env:
 # Configure the `postgres` accessory.
 accessories:
   db:
-    image: postgres:15
+    image: postgres:14
     host: teletri.ru
     port: "127.0.0.1:5432:5432"
     env:
@@ -57,18 +57,6 @@ accessories:
       - config/production.sql:/docker-entrypoint-initdb.d/setup.sql
     directories:
       - data:/var/lib/postgresql/data
-  # queue:
-    # image: postgres:15
-    # host: 82.97.252.66
-    # port: "127.0.0.1:5433:5433"
-    # env:
-    #   clear:
-    #     POSTGRES_USER: POSTGRES_USER
-    #     POSTGRES_DB: teletri_production_queue
-    #   secret:
-    #     - POSTGRES_PASSWORD
-    # directories:
-    #   - data:/var/lib/postgresql/data
 aliases:
   console: app exec --interactive --reuse 'bin/rails console'
   shell: app exec --interactive --reuse 'bash'
