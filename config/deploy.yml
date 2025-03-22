@@ -39,13 +39,13 @@ env:
   clear:
     SOLID_QUEUE_IN_PUMA: true
     RAILS_LOG_LEVEL: debug
-    DB_HOST: teletri-db
+    DB_HOST: teletri-postgres
 
 # Configure the `postgres` accessory.
 accessories:
-  db:
+  postgres:
     image: postgres:15
-    host: teletri.ru
+    host: 82.97.252.66
     port: "127.0.0.1:5432:5432"
     env:
       clear:
