@@ -36,23 +36,24 @@ env:
     - AWS_REGION
     - AWS_BUCKET
     - POSTGRES_PASSWORD
+    - POSTGRES_ROOT_PASSWORD
   clear:
     SOLID_QUEUE_IN_PUMA: true
     RAILS_LOG_LEVEL: debug
-    DB_HOST: teletri-mydb
+    DB_HOST: teletri-db
 
 # Configure the `postgres` accessory.
 accessories:
-  mydb:
+  db:
     image: postgres:15
-    host: 82.97.252.66
+    host: teletri.ru
     port: "127.0.0.1:5432:5432"
     env:
       clear:
-        POSTGRES_USER: POSTGRES_USER
+        # POSTGRES_USER: POSTGRES_USER
         POSTGRES_DB: teletri_production
       secret:
-        - POSTGRES_PASSWORD
+        - POSTGRES_ROOT_PASSWORD
     files:
       - config/production.sql:/docker-entrypoint-initdb.d/setup.sql
     directories:

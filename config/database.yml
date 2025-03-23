@@ -91,8 +91,9 @@ production:
   primary: &primary_production
     <<: *default
     database: teletri_production
-    username: <%= ENV.fetch('POSTGRES_USER', 'postgres1') %>
-    password: <%= ENV.fetch('POSTGRES_PASSWORD', 'password1') %>
+    # username: <%= ENV.fetch('POSTGRES_USER', 'postgres1') %>
+    # password: <%= ENV.fetch('POSTGRES_PASSWORD', 'password1') %>
+    password: <%= ENV.fetch('POSTGRES_ROOT_PASSWORD', 'password1') %>
   cache:
     <<: *primary_production
     database: teletri_production_cache
