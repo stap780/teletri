@@ -48,6 +48,7 @@ accessories:
     image: postgres:15
     host: teletri.ru
     port: "127.0.0.1:5432:5432"
+    container_name: teletri-db-new
     env:
       clear:
         # POSTGRES_USER: POSTGRES_USER
