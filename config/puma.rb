@@ -14,7 +14,7 @@ threads 4,50
 
 bind 'unix:///var/www/teletri/shared/tmp/sockets/teletri-puma.sock'
 
-workers 0
+workers 2
 
 restart_command 'bundle exec puma'
 
@@ -42,4 +42,4 @@ end
 plugin :tmp_restart
 
 # Run Solid Queue with rails server
-plugin :solid_queue if ENV["SOLID_QUEUE_IN_PUMA"] || Rails.env.development?
+plugin :solid_queue if ENV["SOLID_QUEUE_IN_PUMA"]
