@@ -93,4 +93,4 @@ gem 'spree_storefront', spree_opts
 gem 'spree_stripe', { 'github': 'spree/spree_stripe', 'branch': 'main' }
 gem 'spree_i18n'
 
-gem 'kamal'
+# gem 'kamal'
