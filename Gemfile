@@ -18,6 +18,7 @@ gem 'jbuilder'
 
 gem 'mini_racer', platforms: :ruby
 
+gem 'aws-sdk-s3'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1", group: :production
 
