@@ -17,7 +17,7 @@ set :puma_error_log,  "#{release_path}/log/puma.error.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 # set :puma_enable_socket_service, true
 
-append :linked_files, 'config/master.key', 'config/database.yml','config/storage.yml'
+append :linked_files, 'config/master.key', 'config/database.yml','config/storage.yml','config/puma.rb'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'public', 'tmp/sockets', 'vendor/bundle', 'lib/tasks', 'lib/drop', 'storage'
 
 namespace :puma do
