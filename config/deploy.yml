@@ -34,7 +34,7 @@ env:
     - POSTGRES_ROOT_PASSWORD
     - DB_HOST
   clear:
-    DB_HOST: DB_HOST
+    DB_HOST: teletri-db
     RAILS_LOG_LEVEL: debug
     SOLID_QUEUE_IN_PUMA: true
 
@@ -57,7 +57,7 @@ accessories:
     port: "127.0.0.1:5432:5432"
     env:
       clear:
-        DB_HOST: DB_HOST
+        DB_HOST: teletri-db
         POSTGRES_USER: POSTGRES_USER
         POSTGRES_DB: teletri_production
       secret:
