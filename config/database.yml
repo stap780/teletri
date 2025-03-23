@@ -91,7 +91,7 @@ production:
   primary: &primary_production
     <<: *default
     database: teletri_production
-    host: <%= ENV["DB_HOST"] %>
+    host: teletri-db
     username: <%= ENV["POSTGRES_USER"] %>
     password: <%= ENV["POSTGRES_PASSWORD"] %>
   cache:
