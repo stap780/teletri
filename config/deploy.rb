@@ -7,6 +7,7 @@ set :application, 'teletri'
 set :repo_url, "git@github.com:stap780/#{fetch(:application)}.git"
 
 set :user, 'deploy'
+set :systemctl_user, :system # this is livehack for 'capistrano3-puma', '6.0.0.beta.1'
 
 set :branch, 'main'
 set :pty,             true
