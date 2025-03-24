@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/spree/spree.git
-  revision: bf164fc847e6a9559bf34cb19677cb8019bb68b7
+  revision: 6eea213f96a8ad348ae92f53fd708cb261d8cb3c
   branch: main
   specs:
     spree (5.0.0.alpha)
@@ -554,7 +554,7 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
-    rdoc (6.12.0)
+    rdoc (6.13.0)
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
     reline (0.6.0)
@@ -595,7 +595,7 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
-    selenium-webdriver (4.29.1)
+    selenium-webdriver (4.30.1)
       base64 (~> 0.2)
       logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
