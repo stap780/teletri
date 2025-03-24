@@ -14,7 +14,7 @@ threads 4,50
 
 bind 'unix:///var/www/teletri/shared/tmp/sockets/teletri-puma.sock'
 
-workers 2
+workers 0
 
 restart_command 'bundle exec puma'
 

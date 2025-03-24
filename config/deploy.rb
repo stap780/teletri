@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.19.2'
 
-server '147.45.104.250', user: 'deploy', roles: %w[app db web]
+server '81.200.146.207', user: 'deploy', roles: %w[app db web]
 
 set :application, 'teletri'
 set :repo_url, "git@github.com:stap780/#{fetch(:application)}.git"
