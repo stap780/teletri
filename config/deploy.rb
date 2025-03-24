@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.19.2'
 
-server '81.200.146.207', user: 'deploy', roles: %w[app db web]
+server '147.45.104.250', user: 'deploy', roles: %w[app db web]
 
 set :application, 'teletri'
 set :repo_url, "git@github.com:stap780/#{fetch(:application)}.git"
@@ -17,6 +17,7 @@ set :puma_access_log, "#{release_path}/log/puma.access.log"
 set :puma_error_log,  "#{release_path}/log/puma.error.log"
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 # set :puma_enable_socket_service, true
+set :puma_restart_command, 'bundle exec --keep-file-descriptors puma'
 
 append :linked_files, 'config/master.key', 'config/database.yml','config/storage.yml','config/puma.rb'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'public', 'tmp/sockets', 'vendor/bundle', 'lib/tasks', 'lib/drop', 'storage'

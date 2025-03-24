@@ -16,7 +16,7 @@ gem 'stimulus-rails'
 
 gem 'jbuilder'
 
-# gem 'mini_racer', platforms: :ruby
+gem 'mini_racer', platforms: :ruby
 
 gem 'aws-sdk-s3'
 # Use Redis adapter to run Action Cable in production
