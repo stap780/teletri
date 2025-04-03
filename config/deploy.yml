@@ -14,7 +14,7 @@ servers:
 # Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
 proxy:
   ssl: true
-  host: teletri.ru
+  host: spree.teletri.ru
 
 # Credentials for your image host.
 registry:
@@ -46,7 +46,7 @@ aliases:
   console: app exec --interactive --reuse 'bin/rails console'
   shell: app exec --interactive --reuse 'bash'
   logs: app logs -f
-  dbc: app exec --interactive --reuse 'bin/rails db:console'
+  dbc: app exec --interactive --reuse 'bin/rails dbconsole'
 
 volumes:
   - 'teletri_storage:/rails/storage'
