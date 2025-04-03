@@ -1,3 +1,4 @@
+<% require "dotenv"; Dotenv.load(".env") %>
 # Name of your application. Used to uniquely configure containers.
 service: teletri
 
@@ -66,7 +67,7 @@ accessories:
     port: "127.0.0.1:5432:5432"
     env:
       clear:
-        POSTGRES_USER: POSTGRES_USER
+        POSTGRES_USER: postgres
         POSTGRES_DB: teletri_production
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
