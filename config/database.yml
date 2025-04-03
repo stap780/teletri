@@ -1,6 +1,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development: &development
@@ -88,21 +90,11 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  primary: &primary_production
+  primary:
     <<: *default
-    database: teletri_production
-    host: teletri-db
-    username: <%= ENV["POSTGRES_USER"] %>
-    password: <%= ENV["POSTGRES_PASSWORD"] %>
-  cache:
-    <<: *primary_production
-    database: teletri_production_cache
-    migrations_paths: db/cache_migrate
+    url: <%= ENV['DATABASE_URL'] %>
   queue:
-    <<: *primary_production
+    <<: *default
     database: teletri_production_queue
+    url: <%= ENV['QUEUE_DATABASE_URL'] %>
     migrations_paths: db/queue_migrate
-  cable:
-    <<: *primary_production
-    database: teletri_production_cable
-    migrations_paths: db/cable_migrate

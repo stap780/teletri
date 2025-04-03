@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/spree/spree.git
-  revision: 6eea213f96a8ad348ae92f53fd708cb261d8cb3c
+  revision: 368abe7796adf83464aeb2d3328d591d71b084fd
   branch: main
   specs:
     spree (5.0.0.alpha)
@@ -11,13 +11,11 @@ GIT
       active_link_to
       bootstrap (~> 4.6, >= 4.6.2.1)
       chartkick (~> 5.0)
-      country_select (~> 8.0)
       currency_select
       dartsass-rails (~> 0.5)
       groupdate (~> 6.2)
       hightop (~> 0.3)
       importmap-rails
-      inline_svg (~> 1.5)
       local_time (~> 3.0)
       mapkick-rb (~> 0.1)
       payment_icons
@@ -25,7 +23,7 @@ GIT
       spree_core (>= 5.0.0.alpha)
       sprockets (>= 4.0)
       stimulus-rails
-      tinymce-rails (~> 7.0)
+      tinymce-rails (~> 6.8.5)
       turbo-rails
     spree_api (5.0.0.alpha)
       bcrypt (~> 3.1)
@@ -37,7 +35,6 @@ GIT
     spree_core (5.0.0.alpha)
       active_storage_validations (= 1.3.0)
       activemerchant (~> 1.67)
-      activerecord-typedstore
       acts-as-taggable-on
       acts_as_list (>= 0.8)
       any_ascii (~> 0.3.2)
@@ -81,7 +78,6 @@ GIT
       canonical-rails (~> 0.2.14)
       heroicon
       importmap-rails
-      inline_svg (~> 1.5)
       local_time (~> 3.0)
       mail_form
       payment_icons
@@ -94,10 +90,10 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_stripe.git
-  revision: 190f020ae1daa3efef67299160dd5d7806d75c41
+  revision: f9ed87dfa95a7d5bc845f35c837d58eb13b68eb6
   branch: main
   specs:
-    spree_stripe (0.0.1)
+    spree_stripe (1.0.2)
       importmap-rails
       spree (>= 5.0.0.alpha)
       spree_admin (>= 5.0.0.alpha)
@@ -176,8 +172,6 @@ GEM
       activemodel (= 7.2.1.2)
       activesupport (= 7.2.1.2)
       timeout (>= 0.4.0)
-    activerecord-typedstore (1.6.0)
-      activerecord (>= 6.1)
     activestorage (7.2.1.2)
       actionpack (= 7.2.1.2)
       activejob (= 7.2.1.2)
@@ -203,8 +197,6 @@ GEM
       activesupport (>= 6.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    airbrussh (1.5.3)
-      sshkit (>= 1.6.1, != 1.7.0)
     any_ascii (0.3.2)
     auto_strip_attributes (2.6.0)
       activerecord (>= 4.0)
@@ -213,17 +205,18 @@ GEM
     awesome_nested_set (3.8.0)
       activerecord (>= 4.0.0, < 8.1)
     aws-eventstream (1.3.2)
-    aws-partitions (1.1072.0)
-    aws-sdk-core (3.220.2)
+    aws-partitions (1.1079.0)
+    aws-sdk-core (3.222.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
       base64
       jmespath (~> 1, >= 1.6.1)
+      logger
     aws-sdk-kms (1.99.0)
       aws-sdk-core (~> 3, >= 3.216.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.182.0)
+    aws-sdk-s3 (1.183.0)
       aws-sdk-core (~> 3, >= 3.216.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.5)
@@ -231,6 +224,9 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.2.0)
     bcrypt (3.1.20)
+    bcrypt_pbkdf (1.1.1)
+    bcrypt_pbkdf (1.1.1-arm64-darwin)
+    bcrypt_pbkdf (1.1.1-x86_64-darwin)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
     bindex (0.8.1)
@@ -243,26 +239,6 @@ GEM
     cancancan (3.6.1)
     canonical-rails (0.2.17)
       actionview (>= 4.1, < 8.1)
-    capistrano (3.19.2)
-      airbrussh (>= 1.0.0)
-      i18n
-      rake (>= 10.0.0)
-      sshkit (>= 1.9.0)
-    capistrano-bundler (2.1.1)
-      capistrano (~> 3.1)
-    capistrano-rails (1.7.0)
-      capistrano (~> 3.1)
-      capistrano-bundler (>= 1.1, < 3)
-    capistrano-rails-console (2.3.0)
-      capistrano (>= 3.5.0, < 4.0.0)
-      sshkit-interactive (~> 0.3.0)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
-    capistrano3-puma (6.0.0)
-      capistrano (~> 3.7)
-      capistrano-bundler
-      puma (>= 5.1, < 7.0)
     capybara (3.40.0)
       addressable
       matrix
@@ -279,10 +255,8 @@ GEM
       logger (~> 1.5)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.0)
-    countries (5.7.2)
+    countries (7.1.1)
       unaccent (~> 0.3)
-    country_select (8.0.3)
-      countries (~> 5.0)
     crass (1.0.6)
     csv (3.3.3)
     currency_select (8.1.0)
@@ -303,7 +277,9 @@ GEM
       warden (~> 1.2.3)
     doorkeeper (5.8.1)
       railties (>= 5)
+    dotenv (3.1.7)
     drb (2.2.1)
+    ed25519 (1.3.0)
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
@@ -332,19 +308,19 @@ GEM
       csv (>= 3.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    google-protobuf (4.30.1)
+    google-protobuf (4.30.2)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.30.1-aarch64-linux)
+    google-protobuf (4.30.2-aarch64-linux)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.30.1-arm64-darwin)
+    google-protobuf (4.30.2-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.30.1-x86_64-darwin)
+    google-protobuf (4.30.2-x86_64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.30.1-x86_64-linux)
+    google-protobuf (4.30.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
     groupdate (6.5.1)
@@ -366,9 +342,6 @@ GEM
       actionpack (>= 6.0.0)
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
-    inline_svg (1.10.0)
-      activesupport (>= 3.0)
-      nokogiri (>= 1.6)
     io-console (0.8.0)
     irb (1.15.1)
       pp (>= 0.6.0)
@@ -381,6 +354,17 @@ GEM
     json (2.10.2)
     jsonapi-serializer (2.2.0)
       activesupport (>= 4.2)
+    kamal (2.5.3)
+      activesupport (>= 7.0)
+      base64 (~> 0.2)
+      bcrypt_pbkdf (~> 1.0)
+      concurrent-ruby (~> 1.2)
+      dotenv (~> 3.1)
+      ed25519 (~> 1.2)
+      net-ssh (~> 7.3)
+      sshkit (>= 1.23.0, < 2.0)
+      thor (~> 1.3)
+      zeitwerk (>= 2.6.18, < 3.0)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -409,7 +393,7 @@ GEM
     libv8-node (23.6.1.0-x86_64-linux)
     libv8-node (23.6.1.0-x86_64-linux-musl)
     local_time (3.0.3)
-    logger (1.6.6)
+    logger (1.7.0)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -472,21 +456,21 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.4)
-    nokogiri (1.18.5-aarch64-linux-gnu)
+    nokogiri (1.18.7-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.5-aarch64-linux-musl)
+    nokogiri (1.18.7-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm-linux-gnu)
+    nokogiri (1.18.7-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm-linux-musl)
+    nokogiri (1.18.7-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm64-darwin)
+    nokogiri (1.18.7-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-darwin)
+    nokogiri (1.18.7-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-linux-gnu)
+    nokogiri (1.18.7-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-linux-musl)
+    nokogiri (1.18.7-x86_64-linux-musl)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     ostruct (0.6.1)
@@ -554,7 +538,7 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
-    rdoc (6.13.0)
+    rdoc (6.13.1)
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
     reline (0.6.0)
@@ -570,21 +554,21 @@ GEM
       ffi (~> 1.12)
       logger
     rubyzip (2.4.1)
-    sass-embedded (1.86.0-aarch64-linux-gnu)
+    sass-embedded (1.86.1-aarch64-linux-gnu)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-aarch64-linux-musl)
+    sass-embedded (1.86.1-aarch64-linux-musl)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-arm-linux-gnueabihf)
+    sass-embedded (1.86.1-arm-linux-gnueabihf)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-arm-linux-musleabihf)
+    sass-embedded (1.86.1-arm-linux-musleabihf)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-arm64-darwin)
+    sass-embedded (1.86.1-arm64-darwin)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-x86_64-darwin)
+    sass-embedded (1.86.1-x86_64-darwin)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-x86_64-linux-gnu)
+    sass-embedded (1.86.1-x86_64-linux-gnu)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-x86_64-linux-musl)
+    sass-embedded (1.86.1-x86_64-linux-musl)
       google-protobuf (~> 4.30)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -636,8 +620,6 @@ GEM
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
       ostruct
-    sshkit-interactive (0.3.0)
-      sshkit (~> 1.12)
     state_machines (0.6.0)
     state_machines-activemodel (0.9.0)
       activemodel (>= 6.0)
@@ -648,7 +630,7 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringex (2.8.6)
-    stringio (3.1.5)
+    stringio (3.1.6)
     stripe (10.1.0)
     stripe_event (2.11.0)
       activesupport (>= 3.1)
@@ -664,7 +646,7 @@ GEM
     thor (1.3.2)
     tilt (2.6.0)
     timeout (0.4.3)
-    tinymce-rails (7.7.1)
+    tinymce-rails (6.8.5)
       railties (>= 3.1.1)
     tracking_number (2.0.1)
       activesupport (>= 4.2.5)
@@ -713,18 +695,13 @@ PLATFORMS
 DEPENDENCIES
   aws-sdk-s3
   bootsnap
-  capistrano
-  capistrano-bundler
-  capistrano-rails
-  capistrano-rails-console
-  capistrano-rvm
-  capistrano3-puma
   capybara
   debug
   devise
   image_processing (~> 1.13)
   importmap-rails
   jbuilder
+  kamal
   letter_opener
   mini_racer
   mission_control-jobs
