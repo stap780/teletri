@@ -95,3 +95,6 @@ gem 'spree_admin', spree_opts
 gem 'spree_storefront', spree_opts
 gem 'spree_stripe', { 'github': 'spree/spree_stripe', 'branch': 'main' }
 gem 'spree_i18n'
+
+# Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
+gem "thruster", require: false

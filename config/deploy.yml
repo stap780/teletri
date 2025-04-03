@@ -15,7 +15,6 @@ servers:
 proxy:
   ssl: true
   host: spree.teletri.ru
-  app_port: 3000
 
 # Credentials for your image host.
 registry:
