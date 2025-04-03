@@ -8,7 +8,7 @@ image: panaet780/teletri
 servers:
   web:
     hosts:
-      - 147.45.104.250
+      - 82.97.253.158
 
 # Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
 proxy:
@@ -62,7 +62,7 @@ builder:
 accessories:
   postgres:
     image: postgres:15
-    host: 147.45.104.250
+    host: 82.97.253.158
     port: "127.0.0.1:5432:5432"
     env:
       clear:
