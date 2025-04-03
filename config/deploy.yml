@@ -60,7 +60,7 @@ builder:
 
 # Configure the `postgres` accessory.
 accessories:
-  db:
+  postgres:
     image: postgres:15
     host: 147.45.104.250
     port: "127.0.0.1:5432:5432"
