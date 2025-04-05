@@ -4,7 +4,7 @@ ruby '3.3.0'
 
 gem 'rails', '~> 7.2.1.2'
 
-gem "pg", "~> 1.1"
+gem 'pg', "~> 1.1"
 
 gem 'puma', '>= 6.0'
 
@@ -19,14 +19,6 @@ gem 'jbuilder'
 gem 'mini_racer', platforms: :ruby
 
 gem 'aws-sdk-s3'
-# Use Redis adapter to run Action Cable in production
-# gem "redis", ">= 4.0.1", group: :production
-
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[ windows jruby ]
@@ -38,7 +30,7 @@ gem 'bootsnap', require: false
 gem 'image_processing', '~> 1.13'
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", require: false
+gem 'kamal', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -51,19 +43,6 @@ group :development do
 
   # Preview emails in the browser [https://github.com/plataformatec/letter_opener]
   gem 'letter_opener'
-
-  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
-
-  # gem 'capistrano', require: false
-  # gem 'capistrano-bundler', require: false
-  # gem 'capistrano-rails', require: false
-  # gem 'capistrano-rails-console', require: false
-  # gem 'capistrano-rvm', require: false
-  # gem 'capistrano3-puma', require: false
 end
 
 group :test do
@@ -91,10 +70,15 @@ spree_opts = if ENV['SPREE_PATH']
 gem 'spree', spree_opts
 gem 'spree_emails', spree_opts
 gem 'spree_sample', spree_opts
+
 gem 'spree_admin', spree_opts
+
 gem 'spree_storefront', spree_opts
 gem 'spree_stripe', { 'github': 'spree/spree_stripe', 'branch': 'main' }
+
 gem 'spree_i18n'
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
-gem "thruster", require: false
+gem 'thruster', require: false
+
+gem 'rack-cors'
