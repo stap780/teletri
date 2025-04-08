@@ -1,8 +1,8 @@
-# syntax = docker/dockerfile:1
+# syntax=docker/dockerfile:1
 # check=error=true
 
 # This Dockerfile is designed for production, not development. Use with Kamal or build'n'run by hand:
-# docker build -t my-app .
+# docker build -t teletri .
 # docker run -d -p 80:80 -p 443:443 --name my-app -e RAILS_MASTER_KEY=<value from config/master.key> my-app
 
 
@@ -18,10 +18,6 @@ WORKDIR /rails
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y curl libjemalloc2 postgresql-client libpq-dev libvips && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
-
-# ENV RAILS_ENV="development" \
-#     BUNDLE_DEPLOYMENT="1" \
-#     BUNDLE_PATH="/usr/local/bundle"
 
 # Set production environment
 ENV RAILS_ENV="production" \
