@@ -91,6 +91,6 @@ Rails.application.config.to_prepare do
 end
 
 if defined?(Devise) && Devise.respond_to?(:parent_controller)
-  Devise.parent_controller = "Spree::StoreController"
-  Devise.parent_mailer = "Spree::BaseMailer"
+  Devise.parent_controller = 'Spree::StoreController'
+  Devise.parent_mailer = 'Spree::BaseMailer'
 end
