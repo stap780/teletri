@@ -61,7 +61,7 @@ accessories:
     env:
       clear:
         POSTGRES_USER: postgres
-        POSTGRES_DB: teletri_production
+        POSTGRES_DB: POSTGRES_DB
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
       secret:
