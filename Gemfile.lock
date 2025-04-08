@@ -90,7 +90,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_stripe.git
-  revision: 71b463deac19371e3fb3db517b261d879840008e
+  revision: 717aecb868e7ae825fb0d405397a19abd6b2aa5f
   branch: main
   specs:
     spree_stripe (1.1.0)
@@ -476,7 +476,7 @@ GEM
     ostruct (0.6.1)
     paranoia (3.0.1)
       activerecord (>= 6, < 8.1)
-    payment_icons (1.7.51)
+    payment_icons (1.7.52)
       frozen_record
       railties (>= 5.0)
       sassc-rails
@@ -653,7 +653,7 @@ GEM
     timeout (0.4.3)
     tinymce-rails (6.8.5)
       railties (>= 3.1.1)
-    tracking_number (2.0.1)
+    tracking_number (2.1.0)
       activesupport (>= 4.2.5)
       json (>= 1.8.3)
     turbo-rails (2.0.13)
