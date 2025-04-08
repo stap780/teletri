@@ -10,6 +10,6 @@ timeweb:
   service: S3
   access_key_id: <%= ENV.fetch('AWS_ACCESS_KEY_ID', Rails.application.credentials.dig(:timeweb, :access_key_id) ) %>
   secret_access_key: <%= ENV.fetch('AWS_SECRET_ACCESS_KEY', Rails.application.credentials.dig(:timeweb, :secret_access_key) ) %>
-  endpoint: <%= ENV.fetch('AWS_ENDPOINT', "https://s3.timeweb.cloud" ) %>
+  endpoint: <%= ENV.fetch('AWS_ENDPOINT', "https://s3.twcstorage.ru" ) %>
   region: <%= ENV.fetch('AWS_REGION', "ru-1" ) %>
   bucket: <%= ENV.fetch('AWS_BUCKET', "ae4cd7ee-b62e0601-19d6-483e-bbf1-416b386e5c23" ) %>
