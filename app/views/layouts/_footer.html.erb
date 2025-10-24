@@ -1,0 +1,112 @@
+<footer class="footer bg-dark text-light py-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Brand Section -->
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-4">
+          <h5 class="text-white mb-3">
+            <%= render 'shared/logo_white' %>
+          </h5>
+          <p class="text-muted mb-3">
+            Мркетинговая платформа для увеличения продаж интернет-магазинов 
+            с помощью умных скидок и персонализированных предложений
+          </p>
+          <div class="d-flex gap-3">
+            <a href="mailto:info@teletri.ru" class="text-muted text-decoration-none">
+              <i class="bi bi-envelope me-2"></i>info@teletri.ru
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services Section -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="text-white mb-3">Сервисы</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="/favorite" class="text-muted text-decoration-none">Листы желаний</a>
+          </li>
+          <li class="mb-2">
+            <a href="/restock" class="text-muted text-decoration-none">Уведомления о поступлении</a>
+          </li>
+          <li class="mb-2">
+            <a href="/preorder" class="text-muted text-decoration-none">Предзаказы</a>
+          </li>
+          <li class="mb-2">
+            <a href="/abandoned_cart" class="text-muted text-decoration-none">Брошенные корзины</a>
+          </li>
+          <li class="mb-2">
+            <a href="/disc" class="text-muted text-decoration-none">Умные скидки</a>
+          </li>
+          <li class="mb-2">
+            <a href="/message" class="text-muted text-decoration-none">Сообщения клиентам</a>
+          </li>
+          <li class="mb-2">
+            <a href="/swatch" class="text-muted text-decoration-none">Объединение товаров</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Company Section -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="text-white mb-3">Компания</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="/#features" class="text-muted text-decoration-none">О нас</a>
+          </li>
+          <li class="mb-2">
+            <a href="/#pricing" class="text-muted text-decoration-none">Тарифы</a>
+          </li>
+          <li class="mb-2">
+            <a href="/oferta" class="text-muted text-decoration-none">Публичная оферта</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Payment Section -->
+      <div class="col-lg-4 col-md-6">
+        <h6 class="text-white mb-3">Способы оплаты</h6>
+        <div class="mb-3">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="text-muted small">Счет для юр лиц</span>
+          </div>
+          <div class="mb-3">
+            <%= image_tag "/visa-master.png", style: "max-width: 120px;", class: "img-fluid" %>
+          </div>
+        </div>
+        <div class="mb-3">
+          <p class="text-muted small mb-1">Прием платежей организован агрегатором</p>
+          <a class="text-muted small" rel="nofollow noopener" href="http://www.paymaster.ru/" target="_blank">
+            Paymaster
+          </a>
+        </div>
+        
+        <!-- Company Info -->
+        <div class="mt-4">
+          <h6 class="text-white mb-3">Наши данные</h6>
+          <ul class="list-unstyled text-muted small">
+            <li class="mb-1">ИП Эмексизов Панаёт Алексеевич</li>
+            <li class="mb-1">Свидетельство о регистрации - 313774610800128</li>
+            <li class="mb-1">ИНН - 772745849012</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <hr class="my-4 border-secondary">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <small class="text-muted">
+          &copy; 2019-<%= Time.now.strftime("%Y") %> Teletri. Все права защищены.
+        </small>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <div class="d-flex gap-3 justify-content-md-end">
+          <!--<a href="/privacy" class="text-muted text-decoration-none small">Политика конфиденциальности</a>
+          <a href="/terms" class="text-muted text-decoration-none small">Условия использования</a>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

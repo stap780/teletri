@@ -1,0 +1,16 @@
+<!-- Feature Card Component -->
+<div class="feature-card card-hover scroll-reveal">
+  <div class="feature-icon">
+    <i class="<%= local_assigns[:icon] || 'bi bi-lightning-charge-fill' %>"></i>
+  </div>
+  <h3 class="feature-title"><%= local_assigns[:title] || "Заголовок" %></h3>
+  <p class="feature-description">
+    <%= local_assigns[:description] || "Описание функциональности" %>
+  </p>
+  <% if local_assigns[:link] %>
+    <div class="mt-3">
+      <%= link_to local_assigns[:link_text] || "Узнать больше", local_assigns[:link], 
+            class: "btn btn-outline-primary btn-sm" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,123 @@
+<!-- Hero Section with Logo -->
+<section class="hero-section">
+  <div class="hero-background">
+    <div class="gradient-overlay"></div>
+    <div class="floating-elements">
+      <div class="floating-circle"></div>
+      <div class="floating-triangle"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="fade-in-up">Маркетинговая платформа для интернет-магазинов</h1>
+      <p class="mb-5 mx-auto fade-in-up" style="max-width: 600px;">
+        Автоматические скидки, листы желаний, уведомления о поступлении товаров 
+        и другие инструменты для роста конверсии и лояльности клиентов
+      </p>
+      <div class="hero-actions fade-in-up">
+        <%= link_to "Начать бесплатно", "#pricing", 
+              class: "btn btn-primary btn-animated btn-lg px-4" %>
+        <%= link_to "Узнать больше", "#features", 
+              class: "btn btn-outline-light btn-animated btn-lg px-4" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="section section-light" id="features">
+  <div class="container">
+    <h2 class="text-center mb-5 display-6 scroll-reveal">Возможности платформы</h2>
+    <div class="feature-grid">
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-lightning-charge-fill"></i>
+        </div>
+        <h3 class="feature-title">Умные скидки</h3>
+        <p class="feature-description">
+          Автоматическое применение скидок на основе правил Liquid. 
+          Персонализированные предложения для каждого клиента.
+        </p>
+      </div>
+      
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-gear-fill"></i>
+        </div>
+        <h3 class="feature-title">Интеграция с Insales</h3>
+        <p class="feature-description">
+          Легкая настройка через API. Автоматическая синхронизация товаров, 
+          заказов и клиентов.
+        </p>
+      </div>
+      
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h3 class="feature-title">Аналитика и отчеты</h3>
+        <p class="feature-description">
+          Отслеживание эффективности скидок. Детальная аналитика по клиентам 
+          и товарам.
+        </p>
+      </div>
+      
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-heart-fill"></i>
+        </div>
+        <h3 class="feature-title">Листы желаний</h3>
+        <p class="feature-description">
+          Клиенты могут создавать различные листы желаний: "Избранные", "На День Рождения", 
+          "Подарки друзьям" и другие. Отправка списков на email с красивым дизайном.
+        </p>
+      </div>
+      
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-bell-fill"></i>
+        </div>
+        <h3 class="feature-title">Уведомления о поступлении</h3>
+        <p class="feature-description">
+          Автоматические уведомления клиентов при поступлении товаров. 
+          Красивые HTML-письма с информацией о товаре.
+        </p>
+      </div>
+      
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-cart-x-fill"></i>
+        </div>
+        <h3 class="feature-title">Брошенные корзины</h3>
+        <p class="feature-description">
+          Автоматическое восстановление брошенных корзин. Стратегии напоминаний 
+          и персональные скидки для возврата.
+        </p>
+      </div>
+      
+      <div class="feature-card card-hover scroll-reveal">
+        <div class="feature-icon">
+          <i class="bi bi-palette-fill"></i>
+        </div>
+        <h3 class="feature-title">Объединение товаров</h3>
+        <p class="feature-description">
+          Создавайте группы товаров по различным признакам: цвет, размер, мощность, форма исполнения, тип аккумулятора и др. 
+          Покупатели могут легко переключаться между вариантами объединенных товаров.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="display-6 mb-4 fade-in-up">Готовы увеличить продажи?</h2>
+    <p class="lead mb-4 fade-in-up">Начните использовать Teletri уже сегодня</p>
+    <%= link_to "Попробовать бесплатно", "#pricing", 
+          class: "btn btn-light btn-animated btn-lg px-4" %>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<%= render 'home/price_section' %>

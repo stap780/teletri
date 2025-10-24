@@ -1,0 +1,49 @@
+<div class="container mb-5">
+  <h1 class="display-4 text-center text-uppercase mt-5 mb-5">Листы желаний</h1>
+  <section class="page-section pt-0">
+    <div class="card-group gap-sm-3 gap-md-2">
+        <div class="card ml-0 mr-0">
+            <div class="view overlay">
+            <%= image_tag "/benefit1.jpg", data: { src: "/benefit1.jpg"}, class: "card-img-top" %>
+            <div class="mask rgba-white-slight"></div>
+            </div>
+            <div class="card-body">
+            <h4 class="card-title">Разные типы списков</h4>
+            <p class="card-text">Клиенты могут создавать различные листы желаний: "Избранные", "Желаемые", "На День Рождения", "Подарки друзьям" и другие. Каждый список можно настроить под свои нужды.</p>
+            </div>
+        </div>
+        <div class="card ml-0 mr-0">
+            <div class="view overlay">
+            <%= image_tag "/benefit3.jpg", data: { src: "/benefit3.jpg"}, class: "card-img-top" %>
+            <div class="mask rgba-white-slight"></div>
+            </div>
+            <div class="card-body">
+            <h4 class="card-title">Отчеты по листам желаний</h4>
+            <p class="card-text">Вы можете просматривать статистику по всем листам желаний клиентов, анализировать популярные товары и экспортировать данные в CSV для дальнейшего анализа.</p>
+            </div>
+        </div>
+        <div class="card ml-0 mr-0">
+            <div class="view overlay">
+            <%= image_tag "/benefit2.jpg", data: { src: "/benefit2.jpg"}, class: "card-img-top" %>
+            <div class="mask rgba-white-slight"></div>
+            </div>
+            <div class="card-body">
+            <h4 class="card-title">Полностью настраиваемый дизайн</h4>
+            <p class="card-text">Обладая базовыми знаниями в CSS вы можете полностью изменить дизайн кнопок и страниц листов желаний под стиль вашего магазина.</p>
+            </div>
+        </div>
+        <div class="card ml-0 mr-0">
+            <div class="view overlay">
+            <%= image_tag "/benefit4.jpg", data: { src: "/benefit4.jpg"}, class: "card-img-top" %>
+            <div class="mask rgba-white-slight"></div>
+            </div>
+            <div class="card-body">
+            <h4 class="card-title">Отправка списков на email</h4>
+            <p class="card-text">Клиенты могут отправлять свои листы желаний на email, делиться ими с друзьями или сохранять для будущих покупок.</p>
+            <p></p>
+            </div>
+        </div>
+    </div>
+  </section>
+  <%= render 'home/price_section'%>
+</div>
