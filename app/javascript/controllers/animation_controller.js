@@ -70,6 +70,12 @@ export default class extends Controller {
         e.preventDefault()
         
         const targetId = link.getAttribute('href')
+        
+        // Skip if href is just "#" (invalid selector)
+        if (!targetId || targetId === '#') {
+          return
+        }
+        
         const targetElement = document.querySelector(targetId)
         
         if (targetElement) {
